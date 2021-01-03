@@ -128,7 +128,7 @@ Content: &lt;USERNAME&gt;.github.io
 </span><span class="cp"></span>
 <span class="nb">set</span> -e <span class="c1"># If a command fails then the deploy stops</span>
 <span class="nb">printf</span> <span class="s2">&#34;\033[0;32mDeploying updates to GitHub...\033[0m\n&#34;</span>
-hugo
+hugo <span class="c1"># Build a site to the ./public directory</span>
 <span class="nb">cd</span> public
 git add . <span class="c1"># Add all changes to git</span>
 
