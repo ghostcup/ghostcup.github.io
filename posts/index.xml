@@ -86,7 +86,7 @@ git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/stack
 <p>⚠️️  一般来说，我们将文章存放在 <code>./content/posts</code> 中，但针对不同的主题，有不同的客制化方法以及不同的发布方法。比如，如果你使用 Stack 或者目前 star 数排行第一的 Even 主题，与文档给出的方法不同，需要将文章存放在 <code>./content/post</code> 目录中。</p>
 </blockquote>
 <h2 id="本地启动-hugo-服务器">本地启动 Hugo 服务器</h2>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ hugo server -D
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">hugo server -D
 </code></pre></div><p>可在 <a href="http://localhost:1313/">http://localhost:1313/</a> 于本地查看站点页面、修改并实时观察变动。按下 Ctrl + C 中止。</p>
 <blockquote>
 <p>💬 <code>-D</code> 令 drafts 在编写与校对中可见。后续将站点部署上线，drafts 不会出现在 posts 中。</p>
@@ -121,15 +121,15 @@ git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/stack
 <h1 id="部署到-github-pages">部署到 GitHub Pages</h1>
 <h2 id="准备事项">准备事项</h2>
 <p>将此前生成的 <code>public</code> 目录删除：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ rm -rf public
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">rm -rf public
 </code></pre></div><p>将我们作为 GitHub Pages 部署的 repo clone 到本地，命名为 <code>public</code>。这样后续使用 <code>hugo</code> 生成的静态文件将全部存放在此目录，并且拥有一个 remote origin 指向我们的 GitHub Pages repo。</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ git submodule add git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">git submodule add git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
 </code></pre></div><p>如果使用 custom domain 的话，需要将域名写入 <code>CNAME</code> 文件并将其放置在 GitHub Pages repo 之中：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ <span class="nb">echo</span> <span class="s2">&#34;&lt;YOURDOMAIN&gt;&#34;</span> &gt;&gt; static/CNAME
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">echo</span> <span class="s2">&#34;&lt;YOURDOMAIN&gt;&#34;</span> &gt;&gt; static/CNAME
 </code></pre></div><h2 id="脚本化发布流程">脚本化发布流程</h2>
 <p>完整的 deploy 步骤需要执行好几条命令，所以我们将其放在一个 script 中，并在之后的部署中直接调用它。</p>
 <p>首先建立一个 <code>deploy.sh</code> 用以存放我们的 script，并将它通过相应的应用打开（可能是 TextEdit 或其他文本编辑器）：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ touch deploy.sh <span class="o">&amp;&amp;</span> open deploy.sh
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">touch deploy.sh <span class="o">&amp;&amp;</span> open deploy.sh
 </code></pre></div><p>将以下代码复制到其中：</p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/sh
 </span><span class="cp"></span>
@@ -155,12 +155,12 @@ git add .
 git commit -m <span class="s2">&#34;Update blog files&#34;</span>
 git push origin master
 </code></pre></div><p>最后，给予 <code>deploy.sh</code> 可执行权限：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ chmod +x deploy.sh
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">chmod +x deploy.sh
 </code></pre></div><h2 id="发布">发布</h2>
 <p>每次需要发布，通过执行 <code>deploy.sh</code>：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ ./deploy.sh
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">./deploy.sh
 </code></pre></div><p>如果你有额外的 commit message：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ ./deploy.sh <span class="s2">&#34;&lt;YOUR OPTIONAL COMMIT MESSAGE&gt;&#34;</span>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">./deploy.sh <span class="s2">&#34;&lt;YOUR OPTIONAL COMMIT MESSAGE&gt;&#34;</span>
 </code></pre></div>]]></content>
 		</item>
 		

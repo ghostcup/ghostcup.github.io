@@ -11,7 +11,7 @@
 <meta itemprop="description" content="Assumptions about Audience 本「教程」乃为女友之便所写，故 假设阅读者具有使用命令行工具的基本能力。 假设操作环境为 macOS Mojave/Big Sur。 Pre-requisites 安装 Homebrew Homebrew 是 macOS 广为流行的包管理器。我们">
 <meta itemprop="datePublished" content="2021-01-03T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-01-03T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1986">
+<meta itemprop="wordCount" content="1978">
 
 
 
@@ -150,7 +150,7 @@ git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/stack
 <p>⚠️️  一般来说，我们将文章存放在 <code>./content/posts</code> 中，但针对不同的主题，有不同的客制化方法以及不同的发布方法。比如，如果你使用 Stack 或者目前 star 数排行第一的 Even 主题，与文档给出的方法不同，需要将文章存放在 <code>./content/post</code> 目录中。</p>
 </blockquote>
 <h2 id="本地启动-hugo-服务器">本地启动 Hugo 服务器<a href="#本地启动-hugo-服务器" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ hugo server -D
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">hugo server -D
 </code></pre></div><p>可在 <a href="http://localhost:1313/">http://localhost:1313/</a> 于本地查看站点页面、修改并实时观察变动。按下 Ctrl + C 中止。</p>
 <blockquote>
 <p>💬 <code>-D</code> 令 drafts 在编写与校对中可见。后续将站点部署上线，drafts 不会出现在 posts 中。</p>
@@ -185,15 +185,15 @@ git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/stack
 <h1 id="部署到-github-pages">部署到 GitHub Pages<a href="#部署到-github-pages" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h1>
 <h2 id="准备事项">准备事项<a href="#准备事项" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 <p>将此前生成的 <code>public</code> 目录删除：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ rm -rf public
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">rm -rf public
 </code></pre></div><p>将我们作为 GitHub Pages 部署的 repo clone 到本地，命名为 <code>public</code>。这样后续使用 <code>hugo</code> 生成的静态文件将全部存放在此目录，并且拥有一个 remote origin 指向我们的 GitHub Pages repo。</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ git submodule add git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">git submodule add git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
 </code></pre></div><p>如果使用 custom domain 的话，需要将域名写入 <code>CNAME</code> 文件并将其放置在 GitHub Pages repo 之中：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ <span class="nb">echo</span> <span class="s2">&#34;&lt;YOURDOMAIN&gt;&#34;</span> &gt;&gt; static/CNAME
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">echo</span> <span class="s2">&#34;&lt;YOURDOMAIN&gt;&#34;</span> &gt;&gt; static/CNAME
 </code></pre></div><h2 id="脚本化发布流程">脚本化发布流程<a href="#脚本化发布流程" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 <p>完整的 deploy 步骤需要执行好几条命令，所以我们将其放在一个 script 中，并在之后的部署中直接调用它。</p>
 <p>首先建立一个 <code>deploy.sh</code> 用以存放我们的 script，并将它通过相应的应用打开（可能是 TextEdit 或其他文本编辑器）：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ touch deploy.sh <span class="o">&amp;&amp;</span> open deploy.sh
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">touch deploy.sh <span class="o">&amp;&amp;</span> open deploy.sh
 </code></pre></div><p>将以下代码复制到其中：</p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/sh
 </span><span class="cp"></span>
@@ -219,12 +219,12 @@ git add .
 git commit -m <span class="s2">&#34;Update blog files&#34;</span>
 git push origin master
 </code></pre></div><p>最后，给予 <code>deploy.sh</code> 可执行权限：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ chmod +x deploy.sh
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">chmod +x deploy.sh
 </code></pre></div><h2 id="发布">发布<a href="#发布" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 <p>每次需要发布，通过执行 <code>deploy.sh</code>：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ ./deploy.sh
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">./deploy.sh
 </code></pre></div><p>如果你有额外的 commit message：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ ./deploy.sh <span class="s2">&#34;&lt;YOUR OPTIONAL COMMIT MESSAGE&gt;&#34;</span>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">./deploy.sh <span class="s2">&#34;&lt;YOUR OPTIONAL COMMIT MESSAGE&gt;&#34;</span>
 </code></pre></div>
 			</div>
 			<hr class="post-end">
@@ -232,7 +232,7 @@ git push origin master
 				<p>
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://blog.boilingcong.ee/tags/%E6%8A%80%E6%9C%AF">技术</a></span>
 				</p>
-				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>1986 Words</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>1978 Words</p>
 				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2021-01-03</p>
 			</footer>
 		</article>
