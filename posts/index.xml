@@ -87,10 +87,6 @@ git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/stack
 <h1 id="撰写文章">撰写文章</h1>
 <h2 id="编辑-markdown-文件">编辑 Markdown 文件</h2>
 <p>推荐使用 <a href="https://typora.io/">Typora</a> 编辑器，它移除了预览窗口，主打的特性是无缝（从 syntax 转换到样式文本）、所见即所想的编辑体验。</p>
-<blockquote>
-<p>💬 并且它内置了一定的<a href="https://support.typora.io/Math/">数学支持</a>，可以与 <a href="https://katex.org/docs/autorender.html">KaTeX 的自动渲染插件</a> 协同，提供在文章里编写公式的支持。</p>
-<p>🔗️ <a href="https://daringfireball.net/projects/markdown/basics">Markdown: Basics</a>, <a href="https://daringfireball.net/projects/markdown/syntax">Markdown: Syntax</a>, <a href="https://support.typora.io/">Typora Support</a></p>
-</blockquote>
 <h2 id="front-matter">Front Matter</h2>
 <p><a href="https://gohugo.io/content-management/front-matter/">front matter</a> 允许你将 metadata（比如 <code>categories</code>、<code>date</code>、<code>tags</code>、<code>title</code>）附在内容文件之中，Hugo 通过这些信息生成、组织、归类你的文章。</p>
 <p>它可以由四种不同的格式完成，这里我们以 yaml 格式为例。yaml 格式的 front matter 以 <code>---</code> 包裹。将以下代码放在文章（Markdown 文件）的最开头将给文章提供 metadata，不同的 front matter variables 提供的信息可查看<a href="https://gohugo.io/content-management/front-matter/#front-matter-variables">具体说明</a>。</p>
