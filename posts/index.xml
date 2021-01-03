@@ -111,7 +111,7 @@ git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/stack
 </code></pre></div><p>将我们作为 GitHub Pages 部署的 repo clone 到本地，命名为 <code>public</code>。这样后续使用 <code>hugo</code> 生成的静态文件将全部存放在此目录，并且拥有一个 remote origin 指向我们的 GitHub Pages repo。</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">git submodule add git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
 </code></pre></div><p>如果使用 custom domain 的话，需要将域名写入 <code>CNAME</code> 文件并将其放置在 GitHub Pages repo 之中：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">echo</span> <span class="s2">&#34;&lt;YOURDOMAIN&gt;&#34;</span> &gt;&gt; static/CNAME
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">echo</span> <span class="s2">&#34;&lt;YOURDOMAIN&gt;&#34;</span> &gt; static/CNAME
 </code></pre></div><p>同时，在 DNS 管理中添加一条 CNAME record：</p>
 <pre><code>Name:    &lt;YOURDOMAIN&gt;
 Content: &lt;USERNAME&gt;.github.io
