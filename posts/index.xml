@@ -1,20 +1,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Posts on Ghost in the Cup</title>
-		<link>https://namanana.boilingcong.ee/posts/</link>
+		<link>https://bloggie.boilingcong.ee/posts/</link>
 		<description>Recent content in Posts on Ghost in the Cup</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
 		<lastBuildDate>Sun, 03 Jan 2021 00:00:00 +0000</lastBuildDate>
-		<atom:link href="https://namanana.boilingcong.ee/posts/index.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="https://bloggie.boilingcong.ee/posts/index.xml" rel="self" type="application/rss+xml" />
 		
 		<item>
 			<title>利用 Hugo 建立静态博客并通过 GitHub Pages 部署</title>
-			<link>https://namanana.boilingcong.ee/posts/not-a-hugo-tutorial/</link>
+			<link>https://bloggie.boilingcong.ee/posts/not-a-hugo-tutorial/</link>
 			<pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
 			
-			<guid>https://namanana.boilingcong.ee/posts/not-a-hugo-tutorial/</guid>
+			<guid>https://bloggie.boilingcong.ee/posts/not-a-hugo-tutorial/</guid>
 			<description>Assumptions about Audience 本「教程」乃为女友之便所写，故 假设阅读者具有使用命令行工具的基本能力。 假设操作环境为 macOS Mojave/Big Sur。 Pre-requisites 安装 Homebrew Homebrew 是 macOS 广为流行的包管理器。我们</description>
 			<content type="html"><![CDATA[<hr>
 <h1 id="assumptions-about-audience">Assumptions about Audience</h1>
@@ -155,10 +155,10 @@ git push origin master
 		
 		<item>
 			<title>讓我們逃到綠色裡去──評《言葉之庭》</title>
-			<link>https://namanana.boilingcong.ee/posts/the-garden-of-words/</link>
+			<link>https://bloggie.boilingcong.ee/posts/the-garden-of-words/</link>
 			<pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
 			
-			<guid>https://namanana.boilingcong.ee/posts/the-garden-of-words/</guid>
+			<guid>https://bloggie.boilingcong.ee/posts/the-garden-of-words/</guid>
 			<description>&lt;p&gt;略乏戲劇性的劇本其實本來就未經斧鑿，正如男女主角的外形那般樸實無華，但推進得非常自然。只拍了 46 分鐘，廢篇不多，空鏡頭綿柔瑰麗，當作短小精悍的影視畫集欣賞也未嘗不可。&lt;/p&gt;
 &lt;p&gt;畫面裡反覆出現的 Docomo 大廈，屹立在淡灰色的背景之中，頂著東京天際線的一格，彷彿懸浮著的「此處仍是城市」的橫幅，將這一信息不失融洽地黏附在空靈意境的邊緣，透露出新宿御苑作為一個城市裡的綠色公園，象徵著男女主角的精神綠洲。他們都是生活在城市裡的普普通通的居民，對未來充滿了「典型」的困惑──在學業和理想之間掙扎的 15 歲少年，對工作和人生充滿迷茫的 27 歲老師，從灰暗繁雜的都市（現實）裡，「逃離」到一個被油綠包圍的小亭（精神的棲息之處），遇見了彼此。&lt;/p&gt;
 &lt;p&gt;不覺得這是「狗血」的妄想愛情故事，也認為相比故事線，此片更著重於塑造一個具有整體感的氛圍，而畫作上的高超也有效支撐了這個灰色天幕下綠色世界的構建。男女主角之間，人生階段不同導致的距離感也是不至決絕但隱含畏懼和剋制，傾心愛意的滋生和釋放都恰到好處。劇作對這段感情的編寫，未落入俗套的幻想，也不放入絕望的瓶中，換句話說，沒有通過淺顯的手法操控觀眾，而只是像攝錄雨後的小亭瓦簷那樣，觀察水花自由地濺落。它不是編排宏大、段落有序的羅曼蒂克大作，只是一篇清新淡然的都市人心靈互救寫實小記。&lt;/p&gt;</description>
@@ -169,10 +169,10 @@ git push origin master
 		
 		<item>
 			<title>谈谈「简中」</title>
-			<link>https://namanana.boilingcong.ee/posts/simplified-chinese/</link>
+			<link>https://bloggie.boilingcong.ee/posts/simplified-chinese/</link>
 			<pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
 			
-			<guid>https://namanana.boilingcong.ee/posts/simplified-chinese/</guid>
+			<guid>https://bloggie.boilingcong.ee/posts/simplified-chinese/</guid>
 			<description>&lt;p&gt;諸如「簡中用戶 xxx」的指代法令我反感的原因是給我一種把語言原罪化的感覺。他們通常會用「在語境的加持下，讀者能明白這是在指代哪一個群體」類似的觀點進行辯駁，但我覺得這還是不宜被廣泛接受的用法。&lt;/p&gt;
 &lt;p&gt;說「簡中用戶垃圾」比「大陸人垃圾」少了明晃晃的對目標群體的精準指代，但讓它能更順利地被講出（透過字面上的改動，少了那種「自己在辱罵全體大陸人」的心理負擔）。另一個相似的例子是，大家樂於寫「操」而避開「肏」，雖然減弱了其字形上呈現出的粗鄙性，但卻透過降低了說髒字的心理成本，推動了它的泛用性。&lt;/p&gt;
 &lt;p&gt;「簡中」相比「大陸籍」，離「人」更遠，後者更是「屬性上的」，而語言只是一個工具。人们好像會避開後者這類更直接具体的指代方式，但考慮語境與聽者實際感受的話，「用筷子的」、「食米饭的」比「亞洲人」的歧視性嚴重得多。歸納某個群體的行爲特性本身，就好像包含一種冒犯性。不當的限定詞，激化了羞辱言論的歧視性，但實際上語言沒有任何罪過，一如常用餐具和饮食习惯沒有罪過。&lt;/p&gt;
@@ -187,10 +187,10 @@ git push origin master
 		
 		<item>
 			<title>咚、咚、咚</title>
-			<link>https://namanana.boilingcong.ee/posts/dong-dong-dong/</link>
+			<link>https://bloggie.boilingcong.ee/posts/dong-dong-dong/</link>
 			<pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
 			
-			<guid>https://namanana.boilingcong.ee/posts/dong-dong-dong/</guid>
+			<guid>https://bloggie.boilingcong.ee/posts/dong-dong-dong/</guid>
 			<description>&lt;p&gt;晚上在江边散步。江水已经涨到离步道仅有几米距离，树梢露在水面上变成了丛丛灌木。&lt;/p&gt;
 &lt;p&gt;江水不断冲打斜壁，发出咚、咚、咚的声音。此前从未听过这样有节奏而有撞击感的声音，未觉得这江有如此的生命力，离得如此之近。晚风不算黏稠，江边亭檐边挂着的排排风铃叮叮作响。钓客不少，他们的作业环境比平时垂直升了许多，但向水面射着绿色光线观察钩饵这一点没有改变。&lt;/p&gt;
 &lt;p&gt;写着「防汛」字样的帐篷在桥底支着，如两月前在武汉见到的无数「救灾」帐篷，以一种抵抗的姿态，多少显式化了人的恐惧和坚强。离帐篷不远处，几名年纪看起来参差不齐的萨克斯手演奏着听来不激昂也不悲凉的曲子，没多少情绪从中透露，但继续演奏下去或许就是答案。&lt;/p&gt;
@@ -205,10 +205,10 @@ git push origin master
 		
 		<item>
 			<title>恐惧针头</title>
-			<link>https://namanana.boilingcong.ee/posts/my-needle-phobia-undiagnosed/</link>
+			<link>https://bloggie.boilingcong.ee/posts/my-needle-phobia-undiagnosed/</link>
 			<pubDate>Sun, 07 Jun 2020 00:00:00 +0000</pubDate>
 			
-			<guid>https://namanana.boilingcong.ee/posts/my-needle-phobia-undiagnosed/</guid>
+			<guid>https://bloggie.boilingcong.ee/posts/my-needle-phobia-undiagnosed/</guid>
 			<description>&lt;p&gt;抽血大概是我最为之恐惧的事。没有经过专业的诊断，但我可能具有「针头恐惧症」部分相似的临床症状。&lt;/p&gt;
 &lt;p&gt;形成这种恐惧的原因是幼时体质差得令人诧异，以每周几次为计的就医频率，打了不知道多少针，病历本也不知写完几个。有次发烧到 41 度，在当地的儿童医院吊水，可能因为已神志不清，那一段记忆尤为清晰，在病床上平生第一次看见雪花飘下，外公送我的狮子兽玩具也历历在目。一段称不上创伤但对我伤害颇深的经历是被一名实习护士做皮试，而她好像对于找准血管以及从正确的角度插入针头还不甚熟练。我对此的反应程度是写到这里已经无法继续叙述下去，正如我在写生物试卷时如遇到题干内含有「抽血」二字的题目，会难受得停下来，转为一个自我拥抱的姿势，再把手背与动脉埋进腋下——这样就灭却了幻想出的（在那个场合不存在的）尖锐物体触及他们的可能。&lt;/p&gt;
 &lt;p&gt;就在今天，我经历了目前以来最强烈的一次恐惧反应。&lt;/p&gt;</description>
