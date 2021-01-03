@@ -1,0 +1,16 @@
+pre,
+code,
+pre tt {
+  font-family: "Iosevka Web", Consolas;
+}
+
+blockquote {
+  font-style: normal; 
+  margin: 4em;
+  filter: brightness(80%);
+}
+
+.post-meta,
+h1 {
+  text-align: center;
+}
