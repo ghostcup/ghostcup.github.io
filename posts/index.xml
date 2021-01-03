@@ -116,7 +116,10 @@ git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/stack
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">git submodule add git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
 </code></pre></div><p>如果使用 custom domain 的话，需要将域名写入 <code>CNAME</code> 文件并将其放置在 GitHub Pages repo 之中：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">echo</span> <span class="s2">&#34;&lt;YOURDOMAIN&gt;&#34;</span> &gt;&gt; static/CNAME
-</code></pre></div><h2 id="脚本化发布流程">脚本化发布流程</h2>
+</code></pre></div><p>同时，在 DNS 管理中添加一条 CNAME record：</p>
+<pre><code>Name:    &lt;YOURDOMAIN&gt;
+Content: &lt;USERNAME&gt;.github.io
+</code></pre><h2 id="脚本化发布流程">脚本化发布流程</h2>
 <p>完整的 deploy 步骤需要执行好几条命令，所以我们将其放在一个 script 中，并在之后的部署中直接调用它。</p>
 <p>首先建立一个 <code>deploy.sh</code> 用以存放我们的 script，并将它通过相应的应用打开（可能是 TextEdit 或其他文本编辑器）：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">touch deploy.sh <span class="o">&amp;&amp;</span> open deploy.sh
