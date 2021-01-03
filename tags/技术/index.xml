@@ -14,7 +14,7 @@
       <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://blog.boilingcong.ee/posts/not-a-hugo-tutorial/</guid>
-      <description>序言 本「教程」假设阅读者具有使用命令行工具的基本能力。 本「教程」按女友之需编写，故操作环境为 macOS Mojave/Big Sur。 Pre-requisites 安装 Homebrew Homebrew 是 macOS 最广为流行的包管理器。</description>
+      <description>Assumptions about Audience 本「教程」乃为女友之便所写，故 假设阅读者具有使用命令行工具的基本能力。 假设操作环境为 macOS Mojave/Big Sur。 Pre-requisites 安装 Homebrew Homebrew 是 macOS 广为流行的包管理器。我们</description>
     </item>
     
   </channel>
