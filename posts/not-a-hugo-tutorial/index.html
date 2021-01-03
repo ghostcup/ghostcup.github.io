@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="利用 Hugo 建立静态博客并通过 GitHub Pages 部署">
+<meta itemprop="description" content="序言 本「教程」假设阅读者具有使用命令行工具的基本能力。 本「教程」按女友之需编写，故操作环境为 macOS Mojave/Big Sur。 Pre-requisites 安装 Homebrew Homebrew 是 macOS 最广为流行的包管理器。">
+<meta itemprop="datePublished" content="2021-01-03T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-01-03T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1835">
+
+
+
+<meta itemprop="keywords" content="技术," />
+<meta property="og:title" content="利用 Hugo 建立静态博客并通过 GitHub Pages 部署" />
+<meta property="og:description" content="序言 本「教程」假设阅读者具有使用命令行工具的基本能力。 本「教程」按女友之需编写，故操作环境为 macOS Mojave/Big Sur。 Pre-requisites 安装 Homebrew Homebrew 是 macOS 最广为流行的包管理器。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.boilingcong.ee/posts/not-a-hugo-tutorial/" />
+<meta property="article:published_time" content="2021-01-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-01-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="利用 Hugo 建立静态博客并通过 GitHub Pages 部署"/>
+<meta name="twitter:description" content="序言 本「教程」假设阅读者具有使用命令行工具的基本能力。 本「教程」按女友之需编写，故操作环境为 macOS Mojave/Big Sur。 Pre-requisites 安装 Homebrew Homebrew 是 macOS 最广为流行的包管理器。"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>利用 Hugo 建立静态博客并通过 GitHub Pages 部署</title>
+	<link rel="stylesheet" href="https://blog.boilingcong.ee/css/style.min.dde859928ee7600ec905423b4f055aba03bcce8d54d32646e53869e036638eec.css" integrity="sha256-3ehZko7nYA7JBUI7TwVaugO8zo1U0yZG5Thp4DZjjuw=" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="https://blog.boilingcong.ee/css/custom.css">
+</head>
+
+<body id="page">
+	
+<header id="site-header" class="animated slideInUp">
+	<div class="hdr-wrapper section-inner">
+		<div class="hdr-left">
+			<div class="site-branding">
+				<a href="https://blog.boilingcong.ee/">Ghost in the Cup</a>
+			</div>
+			<nav class="site-nav hide-in-mobile">
+				
+				<a href="https://blog.boilingcong.ee/posts/">Posts</a>
+				<a href="https://boilingcong.ee/@gfis">Mastodon</a>
+
+			</nav>
+		</div>
+		<div class="hdr-right hdr-icons">
+			<button id="menu-btn" class="hdr-btn" title=""><svg xmlns="http://www.w3.org/2000/svg"
+					width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+					stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+					<line x1="3" y1="12" x2="21" y2="12"></line>
+					<line x1="3" y1="6" x2="21" y2="6"></line>
+					<line x1="3" y1="18" x2="21" y2="18"></line>
+				</svg></button>
+		</div>
+	</div>
+</header>
+<div id="mobile-menu" class="animated fast">
+	<ul>
+		<li><a href="https://blog.boilingcong.ee/posts/">Posts</a></li>
+		<li><a href="https://boilingcong.ee/@gfis">Mastodon</a></li>
+	</ul>
+</div>
+
+
+	<main class="site-main section-inner animated fadeIn faster">
+		<article class="thin">
+			<header class="post-header">
+				<h1>利用 Hugo 建立静态博客并通过 GitHub Pages 部署</h1>
+				<div class="post-meta"><span>Jan 3, 2021</span></div>
+			</header>
+			<div class="content">
+				<hr>
+<h1 id="序言">序言<a href="#序言" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h1>
+<ol>
+<li>本「教程」假设阅读者具有使用命令行工具的基本能力。</li>
+<li>本「教程」按女友之需编写，故操作环境为 macOS Mojave/Big Sur。</li>
+</ol>
+<hr>
+<h1 id="pre-requisites">Pre-requisites<a href="#pre-requisites" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h1>
+<h2 id="安装-homebrew">安装 Homebrew<a href="#安装-homebrew" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p><a href="https://brew.sh">Homebrew</a> 是 macOS 最广为流行的包管理器。我们使用它来安装 Git、Hugo 和更多包及工具。</p>
+<p>我们很便利地就可以安装它：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ /bin/bash -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">&#34;</span>
+</code></pre></div><h2 id="安装-git">安装 Git<a href="#安装-git" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p>Hugo 官方推荐用户在开始之前预先安装 Git，而在之后使用 GitHub Pages 部署页面也需要使用到 Git，故我们使用前步骤安装的 Homebrew 安装它：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ brew install git
+</code></pre></div><h2 id="注册-github-帐号并添加-ssh-key-到账户">注册 GitHub 帐号并添加 SSH Key 到账户<a href="#注册-github-帐号并添加-ssh-key-到账户" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p><a href="https://github.com/join">Join GitHub - Create your account</a></p>
+<p>如果此前未生成过 SSH Keys（可以<a href="https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/checking-for-existing-ssh-keys">检查</a>），<a href="https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">生成新的 SSH Key 并加入 ssh-agent</a>。<a href="https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account">将 SSH Key 加入 GitHub 账户</a>。</p>
+<h2 id="建立-github-repositories">建立 GitHub Repositories<a href="#建立-github-repositories" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p>在此步骤中我们需要建立两个 repos，一个用来通过 GitHub Pages 部署静态博客，一个用来储存站点源文件。</p>
+<ol>
+<li>建立一个用来部署 GitHub Pages 的 repo，命名为 <code>&lt;USERNAME&gt;@github.io</code>。</li>
+<li>建立一个储存站点源文件的 repo，命名为 <code>blog</code>。</li>
+</ol>
+<h2 id="初次运行-git-前的配置">初次运行 Git 前的配置<a href="#初次运行-git-前的配置" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p>为 Git 配置用户名和邮件地址：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ git config --global user.name <span class="s2">&#34;&lt;USERNAME&gt;&#34;</span>
+$ git config --global user.email &lt;EMAIL&gt;
+</code></pre></div><h2 id="准备域名optional">准备域名（Optional）<a href="#准备域名optional" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p>如要使用定制域名（custom domain），可参考 <a href="https://tld-list.com">tld-list.com/</a> 挑选并购买域名。</p>
+<p>此处假设我们购买了域名，并已通过 <a href="https://letsencrypt.org/getting-started/">Let&rsquo;s Encrypt</a> 或 <a href="https://www.cloudflare.com/ssl/">Cloudflare Free SSL/TLS</a> 等途径为其获取了 SSL 证书（如果不确定的话可以<a href="https://crt.sh/">检查</a>）。</p>
+<hr>
+<h1 id="安装-hugo-并在本地启用">安装 Hugo 并在本地启用<a href="#安装-hugo-并在本地启用" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h1>
+<h2 id="安装-hugo">安装 Hugo<a href="#安装-hugo" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ brew install hugo
+</code></pre></div><p>检查安装是否成功以及其版本：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ hugo version
+</code></pre></div><p>得到类似的结果说明安装已经成功，并指示了 Hugo 的版本：</p>
+<pre><code>Hugo Static Site Generator v0.80.0-792EF0F4/extended darwin/amd64 BuildDate: 2020-12-31T13:44:15Z
+</code></pre><h2 id="生成站点文件">生成站点文件<a href="#生成站点文件" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ git clone git@github.com:boogie/blog.git
+$ hugo new site tmp
+$ <span class="nb">cd</span> tmp <span class="o">&amp;&amp;</span> cp -R . ../blog <span class="o">&amp;&amp;</span> <span class="nb">cd</span> .. <span class="o">&amp;&amp;</span> rm -rf tmp
+</code></pre></div><p>以上几步首先 clone <code>blog</code> repo 到本地、生成站点文件，并将站点文件转移到其中。这样我们就获得了一个存放站点文件的本地 repo <code>blog</code>。接下来的操作（命令）主要都是以 <code>blog</code> 目录为根基执行，以 <code>.</code> 表示，比如 <code>./data</code> 代表 <code>Blog</code> 目录下的 <code>data</code> 目录。相关文档中，如果看到 <em>site&rsquo;s root</em> 或 <em>project&rsquo;s root</em> 等等都指的是此<strong>站点目录</strong>。</p>
+<h2 id="添加主题">添加主题<a href="#添加主题" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p>这里使用女朋友选中的主题 <a href="https://themes.gohugo.io/hugo-theme-stack/">Stack</a> 作为例子，可以到 <a href="https://themes.gohugo.io/">themes.gohugo.io/</a> 或者按照项目 Git Stars 排序的 <a href="https://hugoranked.com/">hugoranked.com/</a> 处查看更多的 Hugo 主题。</p>
+<p>从 GitHub 获取主题文件到 <code>./themes</code> 目录：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ <span class="nb">cd</span> blog
+$ git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/stack
+</code></pre></div><blockquote>
+<p>🔗️ <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">Git Tools - Submodules</a></p>
+</blockquote>
+<h2 id="修改站点配置">修改站点配置<a href="#修改站点配置" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p>将主题提供的模板站点配置复制到站点根目录：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ cp themes/stack/exampleSite/config.toml .
+</code></pre></div><p>为了后续使用 GitHub Pages 发布，我们需要修改 <code>baseurl</code> 的值。</p>
+<p>如果准备直接使用 <code>&lt;USERNAME&gt;.github.io</code> 作为域名，将 <code>baseurl</code> 的值修改为 <code>https://&lt;USERNAME&gt;.github.io</code> 。</p>
+<p>如果准备使用定制域名，将 <code>baseurl</code> 的值修改为 <code>https://&lt;YOURDOMAIN&gt;</code>。</p>
+<h2 id="创建文章">创建文章<a href="#创建文章" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ hugo new posts/foo.md
+</code></pre></div><p>新文章（名为 <code>foo.md</code> 的 Markdown 文件）会被创建在 <code>./content/posts</code> 下。</p>
+<blockquote>
+<p>⚠️️  针对不同的主题，有不同的客制化方法，以及不同的发布方法。比如，如果你使用 Stack 或者目前 star 数排行第一的 Even 主题，与上述方法不同，需要将文章存放在 <code>./content/post</code> 目录中。</p>
+</blockquote>
+<h2 id="本地启动-hugo-服务器">本地启动 Hugo 服务器<a href="#本地启动-hugo-服务器" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ hugo server -D
+</code></pre></div><p>可在 <a href="http://localhost:1313/">http://localhost:1313/</a> 于本地查看站点页面、修改并实时观察变动。按下 Ctrl + C 中止。</p>
+<blockquote>
+<p>💬 <code>-D</code> 令 drafts 在编写与校对中可见。后续将站点部署上线，drafts 不会出现在 posts 中。</p>
+</blockquote>
+<hr>
+<h1 id="撰写文章">撰写文章<a href="#撰写文章" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h1>
+<h2 id="编辑-markdown-文件">编辑 Markdown 文件<a href="#编辑-markdown-文件" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p>推荐使用 <a href="https://typora.io/">Typora</a> 编辑器，它移除了预览窗口，主打的特性是无缝（从 syntax 转换到样式文本）、所见即所想的编辑体验。</p>
+<blockquote>
+<p>💬 并且它内置了一定的<a href="https://support.typora.io/Math/">数学支持</a>，可以与 <a href="https://katex.org/docs/autorender.html">KaTeX 的自动渲染插件</a> 协同，提供在文章里编写公式的支持。</p>
+<p>🔗️ <a href="https://daringfireball.net/projects/markdown/basics">Markdown: Basics</a>, <a href="https://daringfireball.net/projects/markdown/syntax">Markdown: Syntax</a>, <a href="https://support.typora.io/">Typora Support</a></p>
+</blockquote>
+<h2 id="front-matter">Front Matter<a href="#front-matter" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p><a href="https://gohugo.io/content-management/front-matter/">front matter</a> 允许你将 metadata（比如 <code>categories</code>、<code>date</code>、<code>tags</code>、<code>title</code>）附在内容文件之中，Hugo 通过这些信息生成、组织、归类你的文章。</p>
+<p>它可以由四种不同的格式完成，这里我们以 yaml 格式为例。yaml 格式的 front matter 以 <code>---</code> 包裹。将以下代码放在文章（Markdown 文件）的最开头将给文章提供 metadata，不同的 front matter variables 提供的信息可查看<a href="https://gohugo.io/content-management/front-matter/#front-matter-variables">具体说明</a>。</p>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nn">---</span><span class="w">
+</span><span class="w"></span><span class="nt">categories</span><span class="p">:</span><span class="w">
+</span><span class="w"></span>- <span class="l">Tech</span><span class="w">
+</span><span class="w"></span>- <span class="l">Programming</span><span class="w">
+</span><span class="w"></span><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;2020-12-21&#34;</span><span class="w">
+</span><span class="w"></span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l">Why Ruby is the best programming language.</span><span class="w">
+</span><span class="w"></span><span class="nt">slug</span><span class="p">:</span><span class="w"> </span><span class="l">why-ruby-is-the-best-pl</span><span class="w">
+</span><span class="w"></span><span class="nt">tags</span><span class="p">:</span><span class="w">
+</span><span class="w"></span>- <span class="l">ruby</span><span class="w">
+</span><span class="w"></span>- <span class="l">programming-language</span><span class="w">
+</span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">Ruby is Best</span><span class="w">
+</span><span class="w"></span><span class="nn">---</span><span class="w">
+</span></code></pre></div><blockquote>
+<p>💬 通过 <code>hugo new posts/...</code> 生成的新文章已经包含了默认的 front matter，你可以直接进行增添及修改。</p>
+</blockquote>
+<hr>
+<h1 id="部署到-github-pages">部署到 GitHub Pages<a href="#部署到-github-pages" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h1>
+<h2 id="准备事项">准备事项<a href="#准备事项" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p>将此前生成的 <code>public</code> 目录删除：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ rm -rf public
+</code></pre></div><p>将我们作为 GitHub Pages 部署的 repo clone 到本地，命名为 <code>public</code>。这样后续使用 <code>hugo</code> 生成的静态文件将全部存放在此目录，并且拥有一个 remote origin 指向我们的 GitHub Pages repo：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ git submodule add git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git public
+</code></pre></div><p>如果使用 custom domain 的话，需要将域名写入 <code>CNAME</code> 文件并将其放置在 GitHub Pages repo 之中：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ <span class="nb">echo</span> <span class="s2">&#34;&lt;YOURDOMAIN&gt;&#34;</span> &gt;&gt; static/CNAME
+</code></pre></div><h2 id="脚本化发布流程">脚本化发布流程<a href="#脚本化发布流程" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p>完整的 deploy 步骤需要执行好几条命令，所以我们将其放在一个 script 中，并在之后的部署中直接调用它。</p>
+<p>首先建立一个 <code>deploy.sh</code> 用以存放我们的 script，并将它通过相应的应用打开（可能是 TextEdit 或其他文本编辑器）：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ touch deploy.sh <span class="o">&amp;&amp;</span> open deploy.sh
+</code></pre></div><p>将以下代码复制到其中：</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/sh
+</span><span class="cp"></span>
+<span class="nb">set</span> -e <span class="c1"># If a command fails then the deploy stops</span>
+<span class="nb">printf</span> <span class="s2">&#34;\033[0;32mDeploying updates to GitHub...\033[0m\n&#34;</span>
+hugo
+<span class="nb">cd</span> public
+git add . <span class="c1"># Add all changes to git</span>
+
+<span class="c1"># Commit changes</span>
+<span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;Rebuild site </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&#34;</span>
+<span class="k">if</span> <span class="o">[</span> -n <span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+	<span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span>
+<span class="k">fi</span>
+git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+
+<span class="c1"># Push source and build repos</span>
+git push origin master
+
+<span class="c1"># Commit all changes of project files and push</span>
+<span class="nb">cd</span> ..
+git add .
+git commit -m <span class="s2">&#34;Update blog files&#34;</span>
+git push origin master
+</code></pre></div><p>最后，给予 <code>deploy.sh</code> 可执行权限：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ chmod +x deploy.sh
+</code></pre></div><h2 id="发布">发布<a href="#发布" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p>每次需要发布，通过执行 <code>deploy.sh</code>：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ ./deploy.sh
+</code></pre></div><p>如果你有额外的 commit message：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ ./deploy.sh <span class="s2">&#34;&lt;YOUR OPTIONAL COMMIT MESSAGE&gt;&#34;</span>
+</code></pre></div>
+			</div>
+			<hr class="post-end">
+			<footer class="post-info">
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://blog.boilingcong.ee/tags/%E6%8A%80%E6%9C%AF">技术</a></span>
+				</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>1835 Words</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2021-01-03</p>
+			</footer>
+		</article>
+		<div class="post-nav thin">
+			<a class="prev-post" href="https://blog.boilingcong.ee/posts/the-garden-of-words/">
+				<span class="post-nav-label">Older&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>讓我們逃到綠色裡去──評《言葉之庭》</span>
+			</a>
+		</div>
+		<div id="comments" class="thin">
+</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2021 <a href="https://blog.boilingcong.ee/">ghostcup</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://blog.boilingcong.ee/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="https://blog.boilingcong.ee/js/bundle.min.4a9a0ac3d2217822c7865b4161e6c2a71de1d70492264337755427898dd718f6.js" integrity="sha256-SpoKw9IheCLHhltBYebCpx3h1wSSJkM3dVQniY3XGPY=" crossorigin="anonymous"></script>
+	
+
+</body>
+
+</html>

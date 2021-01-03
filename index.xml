@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Fri, 16 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.boilingcong.ee/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.boilingcong.ee/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>利用 Hugo 建立静态博客并通过 GitHub Pages 部署</title>
+      <link>https://blog.boilingcong.ee/posts/not-a-hugo-tutorial/</link>
+      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.boilingcong.ee/posts/not-a-hugo-tutorial/</guid>
+      <description>序言 本「教程」假设阅读者具有使用命令行工具的基本能力。 本「教程」按女友之需编写，故操作环境为 macOS Mojave/Big Sur。 Pre-requisites 安装 Homebrew Homebrew 是 macOS 最广为流行的包管理器。</description>
+    </item>
+    
     <item>
       <title>讓我們逃到綠色裡去──評《言葉之庭》</title>
       <link>https://blog.boilingcong.ee/posts/the-garden-of-words/</link>
