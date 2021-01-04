@@ -2,6 +2,15 @@ pre,
 code,
 pre tt {
   font-family: "Jetbrains Mono", Iosevka, "Fira Code", "Jetbrains Mono", Monoid, Hasklig, Consolas, Menlo, Monaco, "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, "YaHei Consolas Hybrid", monospace, "Segoe UI Emoji", "PingFang SC", "Microsoft YaHei"; 
+  writing-mode: horizontal-tb;
+}
+
+.site-main {
+    writing-mode: vertical-lr;
+}
+
+article {
+    text-align: center;
 }
 
 blockquote {
@@ -10,7 +19,16 @@ blockquote {
   filter: brightness(80%);
 }
 
+/*
 .post-meta,
 h1 {
   text-align: center;
+}*/
+
+.content {
+    /* writing-mode: vertical-lr; */
+}
+
+.content p {
+    writing-mode: vertical-lr;
 }
