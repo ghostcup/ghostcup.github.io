@@ -153,7 +153,8 @@ git push origin master
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">./deploy.sh
 </code></pre></div><p>如果你有额外的 commit message：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">./deploy.sh <span class="s2">&#34;&lt;YOUR OPTIONAL COMMIT MESSAGE&gt;&#34;</span>
-</code></pre></div>]]></content>
+</code></pre></div><p>如此，我们每一次执行「发布」，<code>public</code> 内文件将被推送至 GitHub Pages repo，然后新版本的博客将会被部署。随后，<code>blog</code> repo 将会存放你新的站点文件，这方便于备份以及在新的工作环境中重新创建并启用一个博客目录。</p>
+]]></content>
 		</item>
 		
 		<item>
