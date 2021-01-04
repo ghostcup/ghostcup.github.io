@@ -97,7 +97,6 @@ git submodule add thttps://github.com/rhazdon/hugo-theme-hello-friend-ng.git the
 </span><span class="w"></span>- <span class="l">Tech</span><span class="w">
 </span><span class="w"></span>- <span class="l">Programming</span><span class="w">
 </span><span class="w"></span><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;2020-12-21&#34;</span><span class="w">
-</span><span class="w"></span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l">Why Ruby is the best programming language.</span><span class="w">
 </span><span class="w"></span><span class="nt">slug</span><span class="p">:</span><span class="w"> </span><span class="l">why-ruby-is-the-best-pl</span><span class="w">
 </span><span class="w"></span><span class="nt">tags</span><span class="p">:</span><span class="w">
 </span><span class="w"></span>- <span class="l">ruby</span><span class="w">
