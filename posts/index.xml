@@ -118,8 +118,11 @@ git submodule add thttps://github.com/rhazdon/hugo-theme-hello-friend-ng.git the
 <pre><code>Name:    &lt;YOURDOMAIN&gt;
 Content: &lt;USERNAME&gt;.github.io
 </code></pre><h2 id="脚本化发布流程">脚本化发布流程</h2>
-<p>完整的 deploy 步骤需要执行好几条命令，所以我们将其放在一个 script 中，并在之后的部署中直接调用它。</p>
-<p>首先复制以下代码（可以点击右下角的 copy 按钮）：</p>
+<p>完整的发布步骤需要执行好几条命令，所以我们将其放在一个脚本中，并在之后的部署中直接调用它。</p>
+<p>首先创建一个脚本 <code>deploy.sh</code>，并将它通过相应的应用打开（可能是 TextEdit 或其他文本编辑器）：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">touch deploy.sh
+open deploy.sh
+</code></pre></div><p>将以下代码粘贴到其中：</p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/sh
 </span><span class="cp"></span>
 <span class="nb">set</span> -e <span class="c1"># If a command fails then the deploy stops</span>
@@ -143,8 +146,6 @@ git push origin master
 git add .
 git commit -m <span class="s2">&#34;Update blog files&#34;</span>
 git push origin master
-</code></pre></div><p>将剪贴版内容写入 script（不要复制下面这一行，否则会覆盖剪贴板）：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">pbpaste &gt; deploy.sh
 </code></pre></div><p>最后，给予 <code>deploy.sh</code> 可执行权限：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">chmod +x deploy.sh
 </code></pre></div><h2 id="发布">发布</h2>
