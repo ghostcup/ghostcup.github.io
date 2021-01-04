@@ -59,7 +59,7 @@ git config --global user.email &lt;EMAIL&gt; <span class="c1"># GitHub 注册邮
 </code></pre></div><p>得到类似的结果说明安装已经成功，并指示了 Hugo 的版本：</p>
 <pre><code>Hugo Static Site Generator v0.80.0-792EF0F4/extended darwin/amd64 BuildDate: 2020-12-31T13:44:15Z
 </code></pre><h2 id="生成站点文件">生成站点文件</h2>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> ~/Documents <span class="c1"># 这里我们将 blog 目录放置在 Docuements/ 下，请按需修改</span>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> ~/Documents <span class="c1"># 这里我们将 blog 目录放置在 Documents/ 下，请按需修改</span>
 git clone git@github.com:&lt;USERNAME&gt;/blog.git
 hugo new site tmp
 <span class="nb">cd</span> tmp <span class="o">&amp;&amp;</span> cp -R . ../blog <span class="o">&amp;&amp;</span> <span class="nb">cd</span> .. <span class="o">&amp;&amp;</span> rm -rf tmp
