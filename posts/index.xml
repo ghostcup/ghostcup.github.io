@@ -61,9 +61,11 @@ git config --global user.email &lt;EMAIL&gt; <span class="c1"># GitHub 注册邮
 </code></pre><h2 id="生成站点文件">生成站点文件</h2>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> ~/Documents <span class="c1"># 这里我们将 blog 目录放置在 Documents/ 下，请按需修改</span>
 git clone git@github.com:&lt;USERNAME&gt;/blog.git
-hugo new site tmp
-<span class="nb">cd</span> tmp <span class="o">&amp;&amp;</span> cp -R . ../blog <span class="o">&amp;&amp;</span> <span class="nb">cd</span> .. <span class="o">&amp;&amp;</span> rm -rf tmp
-</code></pre></div><p>以上几步首先 clone <code>blog</code> repo 到本地、生成站点文件，并将站点文件转移到其中。这样我们就获得了一个存放站点文件的本地 repo <code>blog</code>。接下来的操作（命令）主要都是以 <code>blog</code> 目录为根基执行，以 <code>.</code> 表示，比如 <code>./data</code> 代表 <code>blog</code> 目录下的 <code>data</code> 目录。相关文档中，如果看到 <em>site&rsquo;s root</em> 或 <em>project&rsquo;s root</em> 等等都指的是此<strong>站点目录</strong>。</p>
+</code></pre></div><p>首先 clone <code>blog</code> repo 到本地。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">hugo new site hugo_tmp
+<span class="nb">cd</span> hugo_tmp <span class="o">&amp;&amp;</span> cp -R . ../blog <span class="o">&amp;&amp;</span> <span class="nb">cd</span> .. <span class="o">&amp;&amp;</span> rm -rf hugo_tmp
+</code></pre></div><p>生成站点文件，并将站点文件转移到其中，这样我们就获得了一个存放站点文件的本地 repo <code>blog</code>。</p>
+<p>接下来的操作（命令）主要都是以 <code>blog</code> 目录为根基执行，以 <code>.</code> 表示，比如 <code>./data</code> 代表 <code>blog</code> 目录下的 <code>data</code> 目录。相关文档中，如果看到 <em>site&rsquo;s root</em> 或 <em>project&rsquo;s root</em> 等等都指的是此<strong>站点目录</strong>。</p>
 <h2 id="添加主题">添加主题</h2>
 <p>这里使用女友选中的主题 <a href="https://themes.gohugo.io/hugo-theme-hello-friend-ng/">Hello Friend NG</a> 作为例子，可以到 <a href="https://themes.gohugo.io/">themes.gohugo.io/</a> 或者按照项目 Git Stars 排序的 <a href="https://hugoranked.com/">hugoranked.com/</a> 处查看更多的 Hugo 主题。</p>
 <p>从 GitHub 获取主题，以 <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">submodule</a> 形式添加到 <code>./themes</code> 目录：</p>
@@ -73,8 +75,8 @@ git submodule add thttps://github.com/rhazdon/hugo-theme-hello-friend-ng.git the
 <p>将主题提供的模板站点配置复制到站点根目录：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">cp themes/hello-friend-ng/exampleSite/config.toml .
 </code></pre></div><p>为了后续使用 GitHub Pages 发布，我们需要修改 <code>config.toml</code> 中 <code>baseurl</code> 的值。</p>
-<p>如果准备直接使用 <code>&lt;USERNAME&gt;.github.io</code> 作为域名，将 <code>baseurl</code> 的值修改为 <code>https://&lt;USERNAME&gt;.github.io</code> 。</p>
-<p>如果准备使用定制域名，将 <code>baseurl</code> 的值修改为 <code>https://&lt;YOURDOMAIN&gt;</code> 或 <code>http://&lt;YOURDOMAIN&gt;</code>（如果域名没有 SSL 证书）。</p>
+<p>如果准备直接使用 <code>&lt;USERNAME&gt;.github.io</code> 作为域名，将 <code>baseurl</code> 的值修改为 <code>https://&lt;USERNAME&gt;.github.io</code> 。如果准备使用定制域名，将 <code>baseurl</code> 的值修改为 <code>https://&lt;YOURDOMAIN&gt;</code> 或 <code>http://&lt;YOURDOMAIN&gt;</code>（如果域名没有 SSL 证书）。</p>
+<p>可能还需要按自己的需求修改其他的值，例如 <code>title</code>、<code>name</code> 之类。</p>
 <h2 id="创建文章">创建文章</h2>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">hugo new posts/my-first-post.md
 </code></pre></div><p>新文章（名为 <code>my-first-post.md</code> 的 Markdown 文件）会被创建在 <code>./content/posts</code> 下。</p>
@@ -117,9 +119,7 @@ git submodule add thttps://github.com/rhazdon/hugo-theme-hello-friend-ng.git the
 Content: &lt;USERNAME&gt;.github.io
 </code></pre><h2 id="脚本化发布流程">脚本化发布流程</h2>
 <p>完整的 deploy 步骤需要执行好几条命令，所以我们将其放在一个 script 中，并在之后的部署中直接调用它。</p>
-<p>首先建立一个 <code>deploy.sh</code> 用以存放我们的 script，并将它通过相应的应用打开（可能是 TextEdit 或其他文本编辑器）：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">touch deploy.sh <span class="o">&amp;&amp;</span> open deploy.sh
-</code></pre></div><p>将以下代码复制到其中：</p>
+<p>首先复制以下代码（可以点击右下角的 copy 按钮）：</p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/sh
 </span><span class="cp"></span>
 <span class="nb">set</span> -e <span class="c1"># If a command fails then the deploy stops</span>
@@ -143,6 +143,8 @@ git push origin master
 git add .
 git commit -m <span class="s2">&#34;Update blog files&#34;</span>
 git push origin master
+</code></pre></div><p>将剪贴版内容写入 script（不要复制下面这一行，否则会覆盖剪贴板）：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">pbpaste &gt; deploy.sh
 </code></pre></div><p>最后，给予 <code>deploy.sh</code> 可执行权限：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">chmod +x deploy.sh
 </code></pre></div><h2 id="发布">发布</h2>
