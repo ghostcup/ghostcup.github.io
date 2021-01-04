@@ -14,3 +14,7 @@ blockquote {
 h1 {
   text-align: center;
 }
+
+.content {
+    margin-bottom: 128px;
+}
