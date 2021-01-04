@@ -11,7 +11,7 @@
 <meta itemprop="description" content="Assumptions about Audience 本「教程」乃为女友之便所写，故 假设阅读者具有使用命令行工具的基本能力。 假设操作环境为 macOS Mojave/Big Sur。 Pre-requisites 安装 Homebrew Homebrew 是 macOS 广为流行的包管理器。我们">
 <meta itemprop="datePublished" content="2021-01-03T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-01-03T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1963">
+<meta itemprop="wordCount" content="1886">
 
 
 
@@ -101,11 +101,11 @@
 <p>GitHub 是一个用以支持版本管理和合作开发的代码代管服务平台。我们需要用它来存放站点文件以及使用它的 GitHub Pages 服务来发布我们的博客。</p>
 <p><a href="https://github.com/join">Join GitHub - Create your account</a></p>
 <p>如果此前未生成过 SSH Keys（可以<a href="https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/checking-for-existing-ssh-keys">检查</a>），<a href="https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">生成新的 SSH Key 并加入 ssh-agent</a>。<a href="https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account">将 SSH Key 加入 GitHub 账户</a>。</p>
-<h2 id="建立-github-repositories">建立 GitHub Repositories<a href="#建立-github-repositories" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
-<p>在此步骤中我们需要建立两个 repos，一个用来通过 GitHub Pages 部署静态博客，一个用来储存站点源文件。</p>
+<h2 id="创建-github-repositories">创建 GitHub Repositories<a href="#创建-github-repositories" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p>在此步骤中我们需要<a href="https://github.com/new">创建</a>两个 repos，一个用来通过 GitHub Pages 部署静态博客，一个用来储存站点源文件。</p>
 <ol>
-<li>建立一个用来部署 GitHub Pages 的 repo，命名为 <code>&lt;USERNAME&gt;@github.io</code>。</li>
-<li>建立一个储存站点源文件的 repo，命名为 <code>blog</code>。</li>
+<li>创建一个用来部署 GitHub Pages 的 repo，命名为 <code>&lt;USERNAME&gt;.github.io</code>。</li>
+<li>创建一个储存站点源文件的 repo，命名为 <code>blog</code>。</li>
 </ol>
 <h2 id="初次运行-git-前的配置">初次运行 Git 前的配置<a href="#初次运行-git-前的配置" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 <p>为 Git 配置用户名和邮件地址：</p>
@@ -128,22 +128,21 @@ hugo new site tmp
 <span class="nb">cd</span> tmp <span class="o">&amp;&amp;</span> cp -R . ../blog <span class="o">&amp;&amp;</span> <span class="nb">cd</span> .. <span class="o">&amp;&amp;</span> rm -rf tmp
 </code></pre></div><p>以上几步首先 clone <code>blog</code> repo 到本地、生成站点文件，并将站点文件转移到其中。这样我们就获得了一个存放站点文件的本地 repo <code>blog</code>。接下来的操作（命令）主要都是以 <code>blog</code> 目录为根基执行，以 <code>.</code> 表示，比如 <code>./data</code> 代表 <code>blog</code> 目录下的 <code>data</code> 目录。相关文档中，如果看到 <em>site&rsquo;s root</em> 或 <em>project&rsquo;s root</em> 等等都指的是此<strong>站点目录</strong>。</p>
 <h2 id="添加主题">添加主题<a href="#添加主题" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
-<p>这里使用女友选中的主题 <a href="https://themes.gohugo.io/hugo-theme-stack/">Stack</a> 作为例子，可以到 <a href="https://themes.gohugo.io/">themes.gohugo.io/</a> 或者按照项目 Git Stars 排序的 <a href="https://hugoranked.com/">hugoranked.com/</a> 处查看更多的 Hugo 主题。</p>
+<p>这里使用女友选中的主题 <a href="https://themes.gohugo.io/hugo-theme-hello-friend-ng/">Hello Friend NG</a> 作为例子，可以到 <a href="https://themes.gohugo.io/">themes.gohugo.io/</a> 或者按照项目 Git Stars 排序的 <a href="https://hugoranked.com/">hugoranked.com/</a> 处查看更多的 Hugo 主题。</p>
 <p>从 GitHub 获取主题，以 <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">submodule</a> 形式添加到 <code>./themes</code> 目录：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> blog
-git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/stack
+git submodule add thttps://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng
 </code></pre></div><h2 id="修改站点配置">修改站点配置<a href="#修改站点配置" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 <p>将主题提供的模板站点配置复制到站点根目录：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">cp themes/stack/exampleSite/config.toml .
-</code></pre></div><p>为了后续使用 GitHub Pages 发布，我们需要修改 <code>baseurl</code> 的值。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">cp themes/hello-friend-ng/exampleSite/config.toml .
+</code></pre></div><p>为了后续使用 GitHub Pages 发布，我们需要修改 <code>config.toml</code> 中 <code>baseurl</code> 的值。</p>
 <p>如果准备直接使用 <code>&lt;USERNAME&gt;.github.io</code> 作为域名，将 <code>baseurl</code> 的值修改为 <code>https://&lt;USERNAME&gt;.github.io</code> 。</p>
 <p>如果准备使用定制域名，将 <code>baseurl</code> 的值修改为 <code>https://&lt;YOURDOMAIN&gt;</code> 或 <code>http://&lt;YOURDOMAIN&gt;</code>（如果域名没有 SSL 证书）。</p>
 <h2 id="创建文章">创建文章<a href="#创建文章" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
-<p>一般来说，我们将文章存放在 <code>./content/posts</code> 中，但针对不同的主题，有不同的客制化方法以及不同的发布方法。比如，如果你使用 Stack 或者目前 star 数排行第一的 Even 主题，与文档给出的方法不同，需要将文章存放在 <code>./content/post</code> 目录中。</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">hugo new post/foo.md
-</code></pre></div><p>新文章（名为 <code>foo.md</code> 的 Markdown 文件）会被创建在 <code>./content/post</code> 下。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">hugo new posts/foo.md
+</code></pre></div><p>新文章（名为 <code>foo.md</code> 的 Markdown 文件）会被创建在 <code>./content/posts</code> 下。</p>
 <p>写入一些内容：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">echo</span> <span class="s2">&#34;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&#34;</span> &gt;&gt; content/post/foo.md
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">echo</span> <span class="s2">&#34;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&#34;</span> &gt;&gt; content/posts/foo.md
 </code></pre></div><h2 id="本地启动-hugo-服务器">本地启动 Hugo 服务器<a href="#本地启动-hugo-服务器" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">hugo server -D <span class="c1"># -D 令 drafts 在编写与校对中可见。后续将站点部署上线，drafts 不会出现在 posts 中。</span>
 </code></pre></div><p>可在 <a href="http://localhost:1313/">http://localhost:1313/</a> 于本地查看站点页面、修改并实时观察变动。按下 Ctrl + C 中止。</p>
@@ -152,7 +151,7 @@ git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/stack
 <h2 id="编辑-markdown-文件">编辑 Markdown 文件<a href="#编辑-markdown-文件" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 <p>推荐使用 <a href="https://typora.io/">Typora</a> 编辑器，它移除了预览窗口，主打的特性是无缝（从 syntax 转换到样式文本）、所见即所想的编辑体验。</p>
 <h2 id="front-matter">Front Matter<a href="#front-matter" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
-<p><a href="https://gohugo.io/content-management/front-matter/">front matter</a> 允许你将 metadata（比如 <code>categories</code>、<code>date</code>、<code>tags</code>、<code>title</code>）附在内容文件之中，Hugo 通过这些信息生成、组织、归类你的文章。</p>
+<p><a href="https://gohugo.io/content-management/front-matter/">front matter</a> 出现在每篇文章的开头，允许你将 metadata（比如 <code>categories</code>、<code>date</code>、<code>tags</code>、<code>title</code>）附在内容文件之中，Hugo 通过这些信息生成、组织、归类你的文章。</p>
 <p>它可以由四种不同的格式完成，这里我们以 yaml 格式为例。yaml 格式的 front matter 以 <code>---</code> 包裹。将以下代码放在文章（Markdown 文件）的最开头将给文章提供 metadata，不同的 front matter variables 提供的信息可查看<a href="https://gohugo.io/content-management/front-matter/#front-matter-variables">具体说明</a>。</p>
 <div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nn">---</span><span class="w">
 </span><span class="w"></span><span class="nt">categories</span><span class="p">:</span><span class="w">
@@ -166,7 +165,7 @@ git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/stack
 </span><span class="w"></span>- <span class="l">programming-language</span><span class="w">
 </span><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">Ruby is Best</span><span class="w">
 </span><span class="w"></span><span class="nn">---</span><span class="w">
-</span></code></pre></div><p>注意，通过 <code>hugo new post/...</code> 生成的新文章已经包含了默认的 front matter，你可以直接进行增添及修改。</p>
+</span></code></pre></div><p>注意，通过 <code>hugo new posts/...</code> 生成的新文章已经包含了默认的 front matter，你可以直接进行增添及修改。</p>
 <hr>
 <h1 id="部署到-github-pages">部署到 GitHub Pages<a href="#部署到-github-pages" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h1>
 <h2 id="准备事项">准备事项<a href="#准备事项" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
@@ -221,7 +220,7 @@ git push origin master
 				<p>
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://bloggie.boilingcong.ee/tags/%E6%8A%80%E6%9C%AF">技术</a></span>
 				</p>
-				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>1963 Words</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>1886 Words</p>
 				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2021-01-03</p>
 			</footer>
 		</article>
