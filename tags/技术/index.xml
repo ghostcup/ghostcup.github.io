@@ -7,7 +7,39 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sun, 03 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bloggie.boilingcong.ee/tags/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Jan 2021 02:07:37 +0800</lastBuildDate><atom:link href="https://bloggie.boilingcong.ee/tags/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>调整 Elasticsearch 分配的 Heap Size</title>
+      <link>https://bloggie.boilingcong.ee/posts/elasticsearch-heap-size-settings-configure/</link>
+      <pubDate>Sat, 09 Jan 2021 02:07:37 +0800</pubDate>
+      
+      <guid>https://bloggie.boilingcong.ee/posts/elasticsearch-heap-size-settings-configure/</guid>
+      <description>&lt;p&gt;今天在&lt;a href=&#34;https://boilingcong.ee/@gfis/105519076282661135&#34;&gt;吐槽纸吸管&lt;/a&gt;之前，在 Mastodon 搜索「纸吸管」，准备连上&lt;a href=&#34;https://boilingcong.ee/@gfis/105508559072549583&#34;&gt;之前的吐槽&lt;/a&gt;形成一个 thread。但没有出来任何搜索结果。查看了一下服务器 Elasticsearch 的运行状态：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo service elasticsearch status
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;随之发现处于 &lt;code&gt;inactive&lt;/code&gt;，同时报错：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Jan 08 07:20:22 boilingcong elasticsearch[31559]: # There is insufficient memory for the Java Runtime Environment to continue.&lt;/p&gt;
+&lt;p&gt;Jan 08 07:20:22 boilingcong elasticsearch[31559]: # Native memory allocation (mmap) failed to map 986513408 bytes for committing reserved memory.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;原来是我可怜的内存只剩下 900 多 MB free，报错信息和&lt;a href=&#34;https://www.elastic.co/guide/en/elasticsearch/reference/current/important-settings.html#heap-size-settings&#34;&gt;查询结果&lt;/a&gt;都显示这并不满足 Elasticsearch 默认分配堆的大小：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;By default, Elasticsearch tells the JVM to use a heap with a minimum and maximum size of 1 GB.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;随后又有：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Elasticsearch will assign the entire heap specified in &lt;a href=&#34;https://www.elastic.co/guide/en/elasticsearch/reference/current/jvm-options.html&#34;&gt;jvm.options&lt;/a&gt; via the &lt;code&gt;Xms&lt;/code&gt; (minimum heap size) and &lt;code&gt;Xmx&lt;/code&gt; (maximum heap size) settings. These two settings must be equal to each other.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其在 &lt;code&gt;jvm.options&lt;/code&gt; 里：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;-Xms1g 
+-Xmx1g
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;所以我们需要通过添加 &lt;code&gt;/etc/elasticsearch/jvm.options.d/custom.options&lt;/code&gt; 或者直接修改&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;的方式将其更改成：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;-Xms512m
+-Xmx512m
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;并重新启动：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo service elasticsearch restart
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
     <item>
       <title>利用 Hugo 建立静态博客并通过 GitHub Pages 部署</title>
       <link>https://bloggie.boilingcong.ee/posts/hugo-site-with-github-pages-hosted/</link>
