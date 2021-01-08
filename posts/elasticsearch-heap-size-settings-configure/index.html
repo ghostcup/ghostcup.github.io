@@ -24,7 +24,7 @@ By default, Elasticsearch tells the JVM to use a heap with a minimum and maximum
 Elasticsearch will assign the entire heap specified in jvm.options via the Xms (minimum heap size) and Xmx (maximum heap size) settings. These two settings must be equal to each other.
 
 其在 jvm.options 里：
--Xms1g 
+-Xms1g
 -Xmx1g
 所以我们需要通过添加 /etc/elasticsearch/jvm.options.d/custom.options 或者直接修改1的方式将其更改成：
 -Xms512m
@@ -56,7 +56,7 @@ By default, Elasticsearch tells the JVM to use a heap with a minimum and maximum
 Elasticsearch will assign the entire heap specified in jvm.options via the Xms (minimum heap size) and Xmx (maximum heap size) settings. These two settings must be equal to each other.
 
 其在 jvm.options 里：
--Xms1g 
+-Xms1g
 -Xmx1g
 所以我们需要通过添加 /etc/elasticsearch/jvm.options.d/custom.options 或者直接修改1的方式将其更改成：
 -Xms512m
@@ -86,7 +86,7 @@ By default, Elasticsearch tells the JVM to use a heap with a minimum and maximum
 Elasticsearch will assign the entire heap specified in jvm.options via the Xms (minimum heap size) and Xmx (maximum heap size) settings. These two settings must be equal to each other.
 
 其在 jvm.options 里：
--Xms1g 
+-Xms1g
 -Xmx1g
 所以我们需要通过添加 /etc/elasticsearch/jvm.options.d/custom.options 或者直接修改1的方式将其更改成：
 -Xms512m
@@ -167,7 +167,7 @@ sudo service elasticsearch restart
 <p>Elasticsearch will assign the entire heap specified in <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/jvm-options.html">jvm.options</a> via the <code>Xms</code> (minimum heap size) and <code>Xmx</code> (maximum heap size) settings. These two settings must be equal to each other.</p>
 </blockquote>
 <p>其在 <code>jvm.options</code> 里：</p>
-<pre><code>-Xms1g 
+<pre><code>-Xms1g
 -Xmx1g
 </code></pre><p>所以我们需要通过添加 <code>/etc/elasticsearch/jvm.options.d/custom.options</code> 或者直接修改<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>的方式将其更改成：</p>
 <pre><code>-Xms512m
