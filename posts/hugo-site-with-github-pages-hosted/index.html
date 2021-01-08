@@ -8,7 +8,12 @@
 	<meta name="theme-color" content="#494f5c">
 	<meta name="msapplication-TileColor" content="#494f5c">
 <meta itemprop="name" content="利用 Hugo 建立静态博客并通过 GitHub Pages 部署">
-<meta itemprop="description" content="Assumptions about Audience 本「教程」乃为女友之便所写，故 假设阅读者具有使用命令行工具的基本能力。（或许有帮助：Navigating in the shell） 假设操作环境为">
+<meta itemprop="description" content="Assumptions about Audience
+本「教程」乃为女友之便所写，故
+
+假设阅读者具有使用命令行工具的基本能力。（或许有帮助：Navigating in the shell）
+假设操作环境为 macOS Mojave/Big Sur。
+">
 <meta itemprop="datePublished" content="2021-01-03T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-01-03T00:00:00+00:00" />
 <meta itemprop="wordCount" content="2054">
@@ -17,14 +22,24 @@
 
 <meta itemprop="keywords" content="技术," />
 <meta property="og:title" content="利用 Hugo 建立静态博客并通过 GitHub Pages 部署" />
-<meta property="og:description" content="Assumptions about Audience 本「教程」乃为女友之便所写，故 假设阅读者具有使用命令行工具的基本能力。（或许有帮助：Navigating in the shell） 假设操作环境为" />
+<meta property="og:description" content="Assumptions about Audience
+本「教程」乃为女友之便所写，故
+
+假设阅读者具有使用命令行工具的基本能力。（或许有帮助：Navigating in the shell）
+假设操作环境为 macOS Mojave/Big Sur。
+" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bloggie.boilingcong.ee/posts/hugo-site-with-github-pages-hosted/" />
 <meta property="article:published_time" content="2021-01-03T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-01-03T00:00:00+00:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="利用 Hugo 建立静态博客并通过 GitHub Pages 部署"/>
-<meta name="twitter:description" content="Assumptions about Audience 本「教程」乃为女友之便所写，故 假设阅读者具有使用命令行工具的基本能力。（或许有帮助：Navigating in the shell） 假设操作环境为"/>
+<meta name="twitter:description" content="Assumptions about Audience
+本「教程」乃为女友之便所写，故
+
+假设阅读者具有使用命令行工具的基本能力。（或许有帮助：Navigating in the shell）
+假设操作环境为 macOS Mojave/Big Sur。
+"/>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -214,7 +229,6 @@ git push origin master
 </code></pre></div><p>如果你有额外的 commit message：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">./deploy.sh <span class="s2">&#34;&lt;YOUR OPTIONAL COMMIT MESSAGE&gt;&#34;</span>
 </code></pre></div><p>如此，我们每一次执行「发布」，<code>public</code> 内文件将被推送至 GitHub Pages repo，然后新版本的博客将会被部署。随后，<code>blog</code> repo 将会存放你新的站点文件，这方便于备份以及在新的工作环境中重新创建并启用一个博客目录。</p>
-
 			</div>
 			<hr class="post-end"> 
 			<footer class="post-info">
