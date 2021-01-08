@@ -18,11 +18,9 @@
 			<description>&lt;p&gt;今天在&lt;a href=&#34;https://boilingcong.ee/@gfis/105519076282661135&#34;&gt;吐槽纸吸管&lt;/a&gt;之前，在 Mastodon 搜索「纸吸管」，准备连上&lt;a href=&#34;https://boilingcong.ee/@gfis/105508559072549583&#34;&gt;之前的吐槽&lt;/a&gt;形成一个 thread。但没有出来任何搜索结果。查看了一下服务器 Elasticsearch 的运行状态：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo service elasticsearch status
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;随之发现处于 &lt;code&gt;inactive&lt;/code&gt;，同时报错：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Jan 08 07:20:22 boilingcong elasticsearch[31559]: # There is insufficient memory for the Java Runtime Environment to continue.&lt;/p&gt;
-&lt;p&gt;Jan 08 07:20:22 boilingcong elasticsearch[31559]: # Native memory allocation (mmap) failed to map 986513408 bytes for committing reserved memory.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;原来是我可怜的内存只剩下 900 多 MB free，报错信息和&lt;a href=&#34;https://www.elastic.co/guide/en/elasticsearch/reference/current/important-settings.html#heap-size-settings&#34;&gt;查询结果&lt;/a&gt;都显示这并不满足 Elasticsearch 默认分配堆的大小：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Jan 08 07:20:22 boilingcong elasticsearch[31559]: # There is insufficient memory for the Java Runtime Environment to continue.
+Jan 08 07:20:22 boilingcong elasticsearch[31559]: # Native memory allocation (mmap) failed to map 986513408 bytes for committing reserved memory.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;原来是我可怜的内存只剩下 900 多 MB free，报错信息和&lt;a href=&#34;https://www.elastic.co/guide/en/elasticsearch/reference/current/important-settings.html#heap-size-settings&#34;&gt;查询结果&lt;/a&gt;都显示这并不满足 Elasticsearch 默认分配堆的大小：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;By default, Elasticsearch tells the JVM to use a heap with a minimum and maximum size of 1 GB.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -42,11 +40,9 @@
 			<content type="html"><![CDATA[<p>今天在<a href="https://boilingcong.ee/@gfis/105519076282661135">吐槽纸吸管</a>之前，在 Mastodon 搜索「纸吸管」，准备连上<a href="https://boilingcong.ee/@gfis/105508559072549583">之前的吐槽</a>形成一个 thread。但没有出来任何搜索结果。查看了一下服务器 Elasticsearch 的运行状态：</p>
 <pre><code>sudo service elasticsearch status
 </code></pre><p>随之发现处于 <code>inactive</code>，同时报错：</p>
-<blockquote>
-<p>Jan 08 07:20:22 boilingcong elasticsearch[31559]: # There is insufficient memory for the Java Runtime Environment to continue.</p>
-<p>Jan 08 07:20:22 boilingcong elasticsearch[31559]: # Native memory allocation (mmap) failed to map 986513408 bytes for committing reserved memory.</p>
-</blockquote>
-<p>原来是我可怜的内存只剩下 900 多 MB free，报错信息和<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/important-settings.html#heap-size-settings">查询结果</a>都显示这并不满足 Elasticsearch 默认分配堆的大小：</p>
+<pre><code>Jan 08 07:20:22 boilingcong elasticsearch[31559]: # There is insufficient memory for the Java Runtime Environment to continue.
+Jan 08 07:20:22 boilingcong elasticsearch[31559]: # Native memory allocation (mmap) failed to map 986513408 bytes for committing reserved memory.
+</code></pre><p>原来是我可怜的内存只剩下 900 多 MB free，报错信息和<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/important-settings.html#heap-size-settings">查询结果</a>都显示这并不满足 Elasticsearch 默认分配堆的大小：</p>
 <blockquote>
 <p>By default, Elasticsearch tells the JVM to use a heap with a minimum and maximum size of 1 GB.</p>
 </blockquote>
