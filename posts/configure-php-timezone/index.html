@@ -13,7 +13,7 @@
 
 For the record, since PHP 5.1.0, it is mandatory to have a proper php.ini or similar configuration of the timezone http://php.net/date-default-timezone-set
 
-遂想办法修改这一配置，首先查看 PHP 信息来定位配置文件：
+看来需要修改 php.ini 这一配置。首先查看 PHP 信息来定位配置文件：
 php --ini
 输出：
 phpinfo()
@@ -22,8 +22,9 @@ PHP Version =&gt; 7.4.13
 System =&gt; [...]
 [...]
 Configuration File (php.ini) Path =&gt; /etc/php/7.4/cli
+Loaded Configuration File =&gt; /etc/php/7.4/cli/php.ini
 [...]
-Uncomment /etc/php/7.4/cli 中以下部分并修改 date.timezone 的值1：
+取消 /etc/php/7.4/cli/php.ini 中 date.timezone的注释并修改其值1：
 [Date]
 ; Defines the default timezone used by the date functions
 ; http://php.net/date.timezone
@@ -31,10 +32,10 @@ date.timezone = Asia/Shanghai
 之后重启服务：
 sudo service nginx reload
 sudo /etc/init.d/php7.4-fpm restart
-──发现一篇原本为早上六点多发布的文章已经显示为下午两点多发布了。">
+──发现一篇发布时间原本早上六点多的文章已经显示为下午两点多发布了。">
 <meta itemprop="datePublished" content="2021-01-09T22:53:32+08:00" />
 <meta itemprop="dateModified" content="2021-01-09T22:53:32+08:00" />
-<meta itemprop="wordCount" content="199">
+<meta itemprop="wordCount" content="218">
 
 
 
@@ -45,7 +46,7 @@ sudo /etc/init.d/php7.4-fpm restart
 
 For the record, since PHP 5.1.0, it is mandatory to have a proper php.ini or similar configuration of the timezone http://php.net/date-default-timezone-set
 
-遂想办法修改这一配置，首先查看 PHP 信息来定位配置文件：
+看来需要修改 php.ini 这一配置。首先查看 PHP 信息来定位配置文件：
 php --ini
 输出：
 phpinfo()
@@ -54,8 +55,9 @@ PHP Version =&gt; 7.4.13
 System =&gt; [...]
 [...]
 Configuration File (php.ini) Path =&gt; /etc/php/7.4/cli
+Loaded Configuration File =&gt; /etc/php/7.4/cli/php.ini
 [...]
-Uncomment /etc/php/7.4/cli 中以下部分并修改 date.timezone 的值1：
+取消 /etc/php/7.4/cli/php.ini 中 date.timezone的注释并修改其值1：
 [Date]
 ; Defines the default timezone used by the date functions
 ; http://php.net/date.timezone
@@ -63,7 +65,7 @@ date.timezone = Asia/Shanghai
 之后重启服务：
 sudo service nginx reload
 sudo /etc/init.d/php7.4-fpm restart
-──发现一篇原本为早上六点多发布的文章已经显示为下午两点多发布了。" />
+──发现一篇发布时间原本早上六点多的文章已经显示为下午两点多发布了。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bloggie.boilingcong.ee/posts/configure-php-timezone/" />
 <meta property="article:published_time" content="2021-01-09T22:53:32+08:00" />
@@ -75,7 +77,7 @@ sudo /etc/init.d/php7.4-fpm restart
 
 For the record, since PHP 5.1.0, it is mandatory to have a proper php.ini or similar configuration of the timezone http://php.net/date-default-timezone-set
 
-遂想办法修改这一配置，首先查看 PHP 信息来定位配置文件：
+看来需要修改 php.ini 这一配置。首先查看 PHP 信息来定位配置文件：
 php --ini
 输出：
 phpinfo()
@@ -84,8 +86,9 @@ PHP Version =&gt; 7.4.13
 System =&gt; [...]
 [...]
 Configuration File (php.ini) Path =&gt; /etc/php/7.4/cli
+Loaded Configuration File =&gt; /etc/php/7.4/cli/php.ini
 [...]
-Uncomment /etc/php/7.4/cli 中以下部分并修改 date.timezone 的值1：
+取消 /etc/php/7.4/cli/php.ini 中 date.timezone的注释并修改其值1：
 [Date]
 ; Defines the default timezone used by the date functions
 ; http://php.net/date.timezone
@@ -93,7 +96,7 @@ date.timezone = Asia/Shanghai
 之后重启服务：
 sudo service nginx reload
 sudo /etc/init.d/php7.4-fpm restart
-──发现一篇原本为早上六点多发布的文章已经显示为下午两点多发布了。"/>
+──发现一篇发布时间原本早上六点多的文章已经显示为下午两点多发布了。"/>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -156,7 +159,7 @@ sudo /etc/init.d/php7.4-fpm restart
 <blockquote>
 <p>For the record, since PHP 5.1.0, it is mandatory to have a proper php.ini or similar configuration of the timezone <a href="http://php.net/date-default-timezone-set">http://php.net/date-default-timezone-set</a></p>
 </blockquote>
-<p>遂想办法修改这一配置，首先查看 PHP 信息来定位配置文件：</p>
+<p>看来需要修改 <code>php.ini</code> 这一配置。首先查看 PHP 信息来定位配置文件：</p>
 <pre><code>php --ini
 </code></pre><p>输出：</p>
 <pre><code>phpinfo()
@@ -165,8 +168,9 @@ PHP Version =&gt; 7.4.13
 System =&gt; [...]
 [...]
 Configuration File (php.ini) Path =&gt; /etc/php/7.4/cli
+Loaded Configuration File =&gt; /etc/php/7.4/cli/php.ini
 [...]
-</code></pre><p>Uncomment <code>/etc/php/7.4/cli</code> 中以下部分并修改 <code>date.timezone</code> 的值<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>：</p>
+</code></pre><p>取消 <code>/etc/php/7.4/cli/php.ini</code> 中 <code>date.timezone</code>的注释并修改其值<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>：</p>
 <pre><code>[Date]
 ; Defines the default timezone used by the date functions
 ; http://php.net/date.timezone
@@ -174,7 +178,7 @@ date.timezone = Asia/Shanghai
 </code></pre><p>之后重启服务：</p>
 <pre><code>sudo service nginx reload
 </code></pre><pre><code>sudo /etc/init.d/php7.4-fpm restart
-</code></pre><p>──发现一篇原本为早上六点多发布的文章已经显示为下午两点多发布了。</p>
+</code></pre><p>──发现一篇发布时间原本早上六点多的文章已经显示为下午两点多发布了。</p>
 <section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -189,7 +193,7 @@ date.timezone = Asia/Shanghai
 				<p>
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://bloggie.boilingcong.ee/tags/%E6%8A%80%E6%9C%AF">技术</a></span>
 				</p>
-				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>199 Words</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>218 Words</p>
 				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>Jan 9, 2021</p>
 			</footer>
 		</article>
