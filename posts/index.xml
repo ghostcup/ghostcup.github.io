@@ -37,7 +37,7 @@ Configuration File (php.ini) Path =&amp;gt; /etc/php/7.4/cli
 date.timezone = Asia/Shanghai
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;之后重启服务：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo service nginx reload
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;/etc/init.d/php7.4-fpm restart
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;sudo /etc/init.d/php7.4-fpm restart
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;──发现一篇原本为早上六点多发布的文章已经显示为下午两点多发布了。&lt;/p&gt;</description>
 			<content type="html"><![CDATA[<p>发现自己搭建的 FreshRSS 推送流里的文章时间总是使用美国时区，所以想解决这一问题。</p>
 <p>在 <a href="https://github.com/FreshRSS/FreshRSS/issues/659">Issue #659</a> 里看到开发者<a href="https://github.com/FreshRSS/FreshRSS/issues/659#issuecomment-58417441">说</a>:</p>
@@ -61,7 +61,7 @@ Configuration File (php.ini) Path =&gt; /etc/php/7.4/cli
 date.timezone = Asia/Shanghai
 </code></pre><p>之后重启服务：</p>
 <pre><code>sudo service nginx reload
-</code></pre><pre><code>/etc/init.d/php7.4-fpm restart
+</code></pre><pre><code>sudo /etc/init.d/php7.4-fpm restart
 </code></pre><p>──发现一篇原本为早上六点多发布的文章已经显示为下午两点多发布了。</p>
 <section class="footnotes" role="doc-endnotes">
 <hr>

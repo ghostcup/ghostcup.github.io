@@ -36,7 +36,7 @@ Configuration File (php.ini) Path =&amp;gt; /etc/php/7.4/cli
 date.timezone = Asia/Shanghai
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;之后重启服务：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo service nginx reload
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;/etc/init.d/php7.4-fpm restart
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;sudo /etc/init.d/php7.4-fpm restart
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;──发现一篇原本为早上六点多发布的文章已经显示为下午两点多发布了。&lt;/p&gt;</description>
     </item>
     
