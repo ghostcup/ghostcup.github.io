@@ -6,8 +6,18 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Sat, 09 Jan 2021 22:53:32 +0800</lastBuildDate>
+		<lastBuildDate>Sun, 10 Jan 2021 00:52:47 +0800</lastBuildDate>
 		<atom:link href="https://bloggie.boilingcong.ee/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>为什么博客选用子域名「bloggie」</title>
+			<link>https://bloggie.boilingcong.ee/posts/why-bloggie/</link>
+			<pubDate>Sun, 10 Jan 2021 00:52:47 +0800</pubDate>
+			
+			<guid>https://bloggie.boilingcong.ee/posts/why-bloggie/</guid>
+			<description></description>
+			<content type="html"><![CDATA[<p>因为 b-l-o-g-g-i-e-boiling-congee 可以用 <a href="https://www.bilibili.com/video/BV18J411P74w/">B-O-O-G-I-E</a> 的语调念。👍🏻</p>]]></content>
+		</item>
 		
 		<item>
 			<title>设置 PHP 默认时区</title>

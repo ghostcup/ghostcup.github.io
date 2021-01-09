@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sat, 09 Jan 2021 22:53:32 +0800</lastBuildDate><atom:link href="https://bloggie.boilingcong.ee/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Jan 2021 00:52:47 +0800</lastBuildDate><atom:link href="https://bloggie.boilingcong.ee/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为什么博客选用子域名「bloggie」</title>
+      <link>https://bloggie.boilingcong.ee/posts/why-bloggie/</link>
+      <pubDate>Sun, 10 Jan 2021 00:52:47 +0800</pubDate>
+      
+      <guid>https://bloggie.boilingcong.ee/posts/why-bloggie/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>设置 PHP 默认时区</title>
       <link>https://bloggie.boilingcong.ee/posts/configure-php-timezone/</link>
