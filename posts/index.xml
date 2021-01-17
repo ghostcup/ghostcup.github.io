@@ -16,11 +16,11 @@
 			
 			<guid>https://bloggie.boilingcong.ee/posts/redis-connection-error/</guid>
 			<description>&lt;p&gt;Some errors of connecting to Redis occur when rebuilding the home timeline for all users&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;~/live$ &lt;span class=&#34;nv&#34;&gt;RAILS_ENV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;production ./bin/tootctl feeds build
-Error processing 270: Error connecting to Redis on localhost:6379 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Errno::ECONNREFUSED&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-Error processing 1: Error connecting to Redis on localhost:6379 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Errno::ECONNREFUSED&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-Error processing 265: Error connecting to Redis on localhost:6379 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Errno::ECONNREFUSED&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check &lt;code&gt;/var/log/redis/redis-server.log&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;~/live$ RAILS_ENV=production ./bin/tootctl feeds build
+Error processing 270: Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)
+Error processing 1: Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)
+Error processing 265: Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Check &lt;code&gt;/var/log/redis/redis-server.log&lt;/code&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;3674:C 15 Jan 22:30:34.679 # Configuration loaded
 3675:M 15 Jan 22:30:34.681 # Creating Server TCP listening socket ::1:6379: bind: Cannot assign requested address
 3710:C 15 Jan 22:32:05.173 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
@@ -50,16 +50,16 @@ Error processing 265: Error connecting to Redis on localhost:6379 &lt;span class
 3711:M 15 Jan 22:32:05.178 # Server initialized
 3711:M 15 Jan 22:32:05.179 * Ready to accept connections
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It works&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;~/live$ &lt;span class=&#34;nv&#34;&gt;RAILS_ENV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;production ./bin/tootctl feeds build
-3/3 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;========================================================================================================&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Time: 00:00:02
-Regenerated feeds &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; accounts
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;pre&gt;&lt;code&gt;~/live$ RAILS_ENV=production ./bin/tootctl feeds build
+3/3 |========================================================================================================| Time: 00:00:02
+Regenerated feeds for 3 accounts
+&lt;/code&gt;&lt;/pre&gt;</description>
 			<content type="html"><![CDATA[<p>Some errors of connecting to Redis occur when rebuilding the home timeline for all users</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">~/live$ <span class="nv">RAILS_ENV</span><span class="o">=</span>production ./bin/tootctl feeds build
-Error processing 270: Error connecting to Redis on localhost:6379 <span class="o">(</span>Errno::ECONNREFUSED<span class="o">)</span>
-Error processing 1: Error connecting to Redis on localhost:6379 <span class="o">(</span>Errno::ECONNREFUSED<span class="o">)</span>
-Error processing 265: Error connecting to Redis on localhost:6379 <span class="o">(</span>Errno::ECONNREFUSED<span class="o">)</span>
-</code></pre></div><p>Check <code>/var/log/redis/redis-server.log</code></p>
+<pre><code>~/live$ RAILS_ENV=production ./bin/tootctl feeds build
+Error processing 270: Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)
+Error processing 1: Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)
+Error processing 265: Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)
+</code></pre><p>Check <code>/var/log/redis/redis-server.log</code></p>
 <pre><code>3674:C 15 Jan 22:30:34.679 # Configuration loaded
 3675:M 15 Jan 22:30:34.681 # Creating Server TCP listening socket ::1:6379: bind: Cannot assign requested address
 3710:C 15 Jan 22:32:05.173 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
@@ -89,10 +89,10 @@ Error processing 265: Error connecting to Redis on localhost:6379 <span class="o
 3711:M 15 Jan 22:32:05.178 # Server initialized
 3711:M 15 Jan 22:32:05.179 * Ready to accept connections
 </code></pre><p>It works</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">~/live$ <span class="nv">RAILS_ENV</span><span class="o">=</span>production ./bin/tootctl feeds build
-3/3 <span class="p">|</span><span class="o">========================================================================================================</span><span class="p">|</span> Time: 00:00:02
-Regenerated feeds <span class="k">for</span> <span class="m">3</span> accounts
-</code></pre></div>]]></content>
+<pre><code>~/live$ RAILS_ENV=production ./bin/tootctl feeds build
+3/3 |========================================================================================================| Time: 00:00:02
+Regenerated feeds for 3 accounts
+</code></pre>]]></content>
 		</item>
 		
 		<item>
