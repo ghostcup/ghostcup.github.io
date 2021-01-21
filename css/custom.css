@@ -1,18 +1,25 @@
+h1 {
+    font-family: trebuchet ms,Verdana,verdana ref,segoe ui,Candara,lucida grande,lucida sans unicode,lucida sans,Tahoma,sans-serif;
+}
+body {
+    font-family: "Source Han Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
 pre,
 code,
 pre tt {
-  font-family: "Jetbrains Mono", Iosevka, "Fira Code", Monoid, Hasklig, Consolas, Menlo, Monaco, "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, "YaHei Consolas Hybrid", monospace, "Segoe UI Emoji", "PingFang SC", "Microsoft YaHei"; 
+    font-family: "Jetbrains Mono", Iosevka, "Fira Code", Monoid, Hasklig, Consolas, Menlo, Monaco, "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, "YaHei Consolas Hybrid", monospace, "Segoe UI Emoji", "PingFang SC", "Microsoft YaHei";
 }
 
 pre, code {
-  white-space : pre-wrap !important;
+    white-space : pre-wrap !important;
 }
 
 blockquote {
-  font-style: normal; 
-  filter: brightness(80%);
-  margin-top: 2em;
-  margin-bottom: 2em;
+    font-style: normal;
+    filter: brightness(80%);
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 /* .post-header, h1 { text-align: center; } */
