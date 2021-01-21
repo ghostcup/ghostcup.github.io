@@ -127,7 +127,7 @@ Jan 08 07:20:22 boilingcong elasticsearch[31559]: # Native memory allocation (mm
       <description>&lt;h1 id=&#34;assumptions-about-audience&#34;&gt;Assumptions about Audience&lt;/h1&gt;
 &lt;p&gt;本「教程」乃为女友之便所写，故&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;假设阅读者具有使用命令行工具的基本能力。（或许有帮助：&lt;a href=&#34;https://missing.csail.mit.edu/2020/course-shell/#navigating-in-the-shell&#34;&gt;Navigating in the shell&lt;/a&gt;）&lt;/li&gt;
+&lt;li&gt;假设阅读者具有使用命令行工具的基本能力。（或许有帮助：&lt;a href=&#34;https://linuxcommand.org/lc3_learning_the_shell.php&#34;&gt;Navigating in the shell&lt;/a&gt;）&lt;/li&gt;
 &lt;li&gt;假设操作环境为 macOS Mojave/Big Sur。&lt;/li&gt;
 &lt;/ol&gt;</description>
     </item>
