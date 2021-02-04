@@ -10,7 +10,7 @@
 		<atom:link href="https://bloggie.boilingcong.ee/posts/index.xml" rel="self" type="application/rss+xml" />
 		
 		<item>
-			<title>《吉祥如意》</title>
+			<title>谈《吉祥如意》</title>
 			<link>https://bloggie.boilingcong.ee/posts/the-reunions/</link>
 			<pubDate>Thu, 04 Feb 2021 13:37:26 +0800</pubDate>
 			
@@ -428,7 +428,7 @@ git push origin master
 		</item>
 		
 		<item>
-			<title>讓我們逃到綠色裡去──評《言葉之庭》</title>
+			<title>談《言葉之庭》</title>
 			<link>https://bloggie.boilingcong.ee/posts/review-of-the-garden-of-words/</link>
 			<pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
 			
@@ -442,7 +442,7 @@ git push origin master
 		</item>
 		
 		<item>
-			<title>谈谈「简中」</title>
+			<title>谈「简中」</title>
 			<link>https://bloggie.boilingcong.ee/posts/talking-about-simplified-chinese/</link>
 			<pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
 			
