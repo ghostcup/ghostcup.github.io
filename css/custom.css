@@ -5,6 +5,18 @@ body {
     font-family: "Source Han Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
+#home-title {
+    display: none;
+}
+
+#verification-link {
+    display: none;
+}
+
+#home-nav a {
+    font-size: 30px;
+}
+
 pre,
 code,
 pre tt {
