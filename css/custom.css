@@ -36,3 +36,7 @@ blockquote {
 
 /* .post-header, h1 { text-align: center; } */
 .content h1 { margin-bottom: 1em; margin-top: 2em; }
+
+.post-nav {
+    font-size: 1em;
+}
