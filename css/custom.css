@@ -40,3 +40,7 @@ blockquote {
 .post-nav {
     font-size: 1em;
 }
+
+.site-main {
+    margin-top: 0;
+}
