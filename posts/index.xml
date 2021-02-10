@@ -344,7 +344,7 @@ git clone git@github.com:&lt;USERNAME&gt;/blog.git
 <p>这里使用女友选中的主题 <a href="https://themes.gohugo.io/hugo-theme-hello-friend-ng/">Hello Friend NG</a> 作为例子，可以到 <a href="https://themes.gohugo.io/">themes.gohugo.io/</a> 或者按照项目 Git Stars 排序的 <a href="https://hugoranked.com/">hugoranked.com/</a> 处查看更多的 Hugo 主题。</p>
 <p>从 GitHub 获取主题，以 <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">submodule</a> 形式添加到 <code>./themes</code> 目录：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> blog
-git submodule add thttps://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng
+git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng
 </code></pre></div><h2 id="修改站点配置">修改站点配置</h2>
 <p>将主题提供的模板站点配置复制到站点根目录：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">cp themes/hello-friend-ng/exampleSite/config.toml .
