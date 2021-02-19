@@ -31,12 +31,26 @@ blockquote {
 }
 
 /* .post-header, h1 { text-align: center; } */
-.content h1 { margin-bottom: 1em; margin-top: 2em; }
+.post-header h1 { font-size: 24px; }
+.content h1 { margin-bottom: 1.5em; margin-top: 2em; }
 
 .post-nav {
     font-size: 1em;
 }
 
 .site-main {
-    margin-top: 0;
+    margin-top: 7em;
+}
+
+.posts-group .post-item {
+    border-bottom: none;
+    list-style: circle;
+}
+
+.post-item {
+    padding-left: 10px;
+}
+
+.thin {
+    max-width: 800px;
 }

@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sun, 10 Jan 2021 00:52:47 +0800</lastBuildDate><atom:link href="https://bloggie.boilingcong.ee/tags/%E6%9D%82%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Feb 2021 02:37:00 +0800</lastBuildDate><atom:link href="https://bloggie.boilingcong.ee/tags/%E6%9D%82%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>荒谬语境</title>
+      <link>https://bloggie.boilingcong.ee/posts/context-with-absurdity/</link>
+      <pubDate>Thu, 18 Feb 2021 02:37:00 +0800</pubDate>
+      
+      <guid>https://bloggie.boilingcong.ee/posts/context-with-absurdity/</guid>
+      <description>&lt;p&gt;从这条&lt;a href=&#34;https://neckbeard.xyz/objects/875e505b-183b-4c4b-aee4-90a1492180bb&#34;&gt;浴中奇思&lt;/a&gt;想到，有些话几乎可以被认为是自带包含荒谬感的语境的。就像如果我说「如果有人用错的地得，我立即假设自己比他更聪明，就因为这一个错」，实际上是在夸张地演绎一个过激的刻薄的不放过获取优越感机会的形象，依个人心绪，还可能包含一些自嘲──或许真的有一瞬间会产生这种可笑的念头。我认为这至少是幽默或者自我表达中的一种，但总有人不仅走不进这种荒谬语境，甚至还一本正经地觉得你 mean  it，也便意味着这段不靠纯字面传递信息的「通讯」也就完全失败了。这种情况挺让人苦恼的，个人表达习惯大概是难改的，另一方当然也不必为了听懂所有人的无聊话而扩展自己的理解域，真的只能说「话不投机半句多」了。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>为什么博客选用子域名「bloggie」</title>
       <link>https://bloggie.boilingcong.ee/posts/why-bloggie/</link>
@@ -18,7 +27,7 @@
     </item>
     
     <item>
-      <title>谈「简中」</title>
+      <title>简中</title>
       <link>https://bloggie.boilingcong.ee/posts/talking-about-simplified-chinese/</link>
       <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
       

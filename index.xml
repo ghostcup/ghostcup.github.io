@@ -7,9 +7,36 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Thu, 04 Feb 2021 13:37:26 +0800</lastBuildDate><atom:link href="https://bloggie.boilingcong.ee/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Feb 2021 02:51:26 +0800</lastBuildDate><atom:link href="https://bloggie.boilingcong.ee/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>谈《吉祥如意》</title>
+      <title>Akira</title>
+      <link>https://bloggie.boilingcong.ee/posts/akira/</link>
+      <pubDate>Sat, 20 Feb 2021 02:51:26 +0800</pubDate>
+      
+      <guid>https://bloggie.boilingcong.ee/posts/akira/</guid>
+      <description>&lt;p&gt;作品先锋深邃之处，在观看前已经略有了解（可以说就是读到一些才来看的），详尽全面的评论已经很多，不必赘述。美学上也是有出彩的（但欣赏不来人物，也感觉有些片段好像不很流畅），但片中透露出的其余短板在我看来又挺明显的。角色和剧情不一定要写好，但非要安排诸多蜻蜓点水的角色和情节，完全浪费了篇章，拉低了观看体验。若要聚焦立意，更好的方法或许是专注于主要人物的塑造和中心叙事，以及可以着墨更多在描绘新东京社会的内景，让它不只有朦胧的概念和一个华丽的外壳，而这自然也是能够支撑隐喻以反哺立意表达的。不能期望观众抱着对现实的理解去逐个地 match 作品的桥段，以解读出的东西提高对作品本身质量的评价。作品可以引导和加强人们对事件和世界的认知，反过来的力度我觉得就要打些折扣了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>荒谬语境</title>
+      <link>https://bloggie.boilingcong.ee/posts/context-with-absurdity/</link>
+      <pubDate>Thu, 18 Feb 2021 02:37:00 +0800</pubDate>
+      
+      <guid>https://bloggie.boilingcong.ee/posts/context-with-absurdity/</guid>
+      <description>&lt;p&gt;从这条&lt;a href=&#34;https://neckbeard.xyz/objects/875e505b-183b-4c4b-aee4-90a1492180bb&#34;&gt;浴中奇思&lt;/a&gt;想到，有些话几乎可以被认为是自带包含荒谬感的语境的。就像如果我说「如果有人用错的地得，我立即假设自己比他更聪明，就因为这一个错」，实际上是在夸张地演绎一个过激的刻薄的不放过获取优越感机会的形象，依个人心绪，还可能包含一些自嘲──或许真的有一瞬间会产生这种可笑的念头。我认为这至少是幽默或者自我表达中的一种，但总有人不仅走不进这种荒谬语境，甚至还一本正经地觉得你 mean  it，也便意味着这段不靠纯字面传递信息的「通讯」也就完全失败了。这种情况挺让人苦恼的，个人表达习惯大概是难改的，另一方当然也不必为了听懂所有人的无聊话而扩展自己的理解域，真的只能说「话不投机半句多」了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>那就好了</title>
+      <link>https://bloggie.boilingcong.ee/posts/problems-would-be-solved-if/</link>
+      <pubDate>Thu, 18 Feb 2021 02:12:00 +0800</pubDate>
+      
+      <guid>https://bloggie.boilingcong.ee/posts/problems-would-be-solved-if/</guid>
+      <description>&lt;p&gt;远了不必谈，或许人记住刚过去的一段时空里自我感受的能力都是弱的，因为那些感受也可能建立在你虚拟出了上上段时空里你的感受之上。回老家过年，待了五六天。过了三十便想念家里，网快电稳，没有鸡鸣狗吠，能喝到咖啡，能吃到薯条，觉得什么都好，「能回去就好了」不禁这么想。真回到家里，也不知道好在哪儿了，在农村时所念想的一切都又变成基本了，珍惜个什么劲呢？农村的凌晨，听着鞭炮噼里啪啦，在家里对环境的感受都模糊了，所以会有回到家里便「好了」的错误期望。事实上，有了那些东西，我也不会当回事，更不会好起来，只是我没有它们时会更加脆弱，仅此而已。不过，昨天在麦当劳刚咬了一口麦乐鸡的我仰天叹了一句「太好吃了」，除非刚从一段支线生活切换归来，平常自然不至于这么真诚感怀，倒是只有在转折处才有的体验。只不过我接下来就抱怨麦当劳为什么不用 PLA 吸管去了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>吉祥如意</title>
       <link>https://bloggie.boilingcong.ee/posts/the-reunions/</link>
       <pubDate>Thu, 04 Feb 2021 13:37:26 +0800</pubDate>
       
@@ -28,7 +55,7 @@
     </item>
     
     <item>
-      <title>谈《心灵奇旅》</title>
+      <title>心灵奇旅</title>
       <link>https://bloggie.boilingcong.ee/posts/soul/</link>
       <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
       
@@ -172,43 +199,6 @@ Jan 08 07:20:22 boilingcong elasticsearch[31559]: # Native memory allocation (mm
 &lt;li&gt;假设阅读者具有使用命令行工具的基本能力。（或许有帮助：&lt;a href=&#34;https://linuxcommand.org/lc3_learning_the_shell.php&#34;&gt;Learning the Shell&lt;/a&gt;）&lt;/li&gt;
 &lt;li&gt;假设操作环境为 macOS Mojave/Big Sur。&lt;/li&gt;
 &lt;/ol&gt;</description>
-    </item>
-    
-    <item>
-      <title>谈《言叶之庭》</title>
-      <link>https://bloggie.boilingcong.ee/posts/review-of-the-garden-of-words/</link>
-      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bloggie.boilingcong.ee/posts/review-of-the-garden-of-words/</guid>
-      <description>&lt;p&gt;略乏戏剧性的剧本其实本来就未经斧凿，正如男女主角的外形那般朴实无华，但推进得非常自然。只拍了 46 分钟，废篇不多，空镜头绵柔瑰丽，当作短小精悍的影视画集欣赏也未尝不可。&lt;/p&gt;
-&lt;p&gt;画面里反复出现的 Docomo 大厦，屹立在淡灰色的背景之中，顶著东京天际线的一格，仿佛悬浮著的「此处仍是城市」的横幅，将这一信息不失融洽地黏附在空灵意境的边缘，透露出新宿御苑作为一个城市里的绿色公园，象征著男女主角的精神绿洲。他们都是生活在城市里的普普通通的居民，对未来充满了「典型」的困惑──在学业和理想之间挣扎的 15 岁少年，对工作和人生充满迷茫的 27 岁老师，从灰暗繁杂的都市（现实）里，「逃离」到一个被油绿包围的小亭（精神的栖息之处），遇见了彼此。&lt;/p&gt;
-&lt;p&gt;不觉得这是「狗血」的妄想爱情故事，也认为相比故事线，此片更着重立意，力求塑造一个具有整体感的氛围，而画作上的高超也有效支撑了这个灰色天幕下绿色世界的构建。男女主角之间，人生阶段不同导致的距离感也是不至决绝但隐含畏惧和克制，倾心爱意的滋生和释放都恰到好处。剧作对这段感情的编写，未落入俗套的幻想，也不放入绝望的瓶中，换句话说，没有通过浅显的手法操控观众，而只是像摄录雨后的小亭瓦簷那样，展示水花自由地溅落。它不是编排宏大、段落有序的罗曼蒂克大作，只是一篇清新淡然的都市人心灵互救写实小记。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>谈「简中」</title>
-      <link>https://bloggie.boilingcong.ee/posts/talking-about-simplified-chinese/</link>
-      <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bloggie.boilingcong.ee/posts/talking-about-simplified-chinese/</guid>
-      <description>&lt;p&gt;诸如「简中用户 xxx」的指代法令我反感的原因是给我一种把语言原罪化的感觉。他们通常会用「在语境的加持下，读者能明白这是在指代哪一个群体」类似的观点进行辩驳，但我觉得这还是不宜被广泛接受的用法。&lt;/p&gt;
-&lt;p&gt;说「简中用户垃圾」比「大陆人垃圾」少了明晃晃的对目标群体的精准指代，但让它能更顺利地被讲出（透过字面上的改动，少了那种「自己在辱骂全体大陆人」的心理负担）。另一个相似的例子是，大家乐于写「操」而避开「肏」，虽然减弱了其字形上呈现出的粗鄙性，但却透过降低了说脏字的心理成本，推动了它的泛用性。&lt;/p&gt;
-&lt;p&gt;「简中」相比「大陆籍」，离「人」更远，后者更是「属性上的」，而语言只是一个工具。人们好像会避开后者这类更直接具体的指代方式，但考虑语境与听者实际感受的话，「用筷子的」、「食米饭的」比「亚洲人」的歧视性严重得多。归纳某个群体的行为特性本身，就好像包含一种冒犯性。不当的限定词，激化了羞辱言论的歧视性，但实际上语言没有任何罪过，一如常用餐具和饮食习惯没有罪过。&lt;/p&gt;
-&lt;p&gt;语言虽然是呈现观点的方式，但也有反向在潜意识或显式思维层面造成影响的功能。例如「滚回去用残体字」这种羞辱方式，其本质是把对国籍贬损的思想剥离，落到了更脱离「人」本身的「实体」上面（语言）。窃以为包括「简中用户」在内的种种用法便是这类攻击方式被很多人接纳、使用的有效推动力之一。&lt;/p&gt;
-&lt;p&gt;所以，即使不考虑「简中」的使用地区里还包含新马导致这种用法存在事实错误，我认为，利用「使用的语言」来归纳和特指一个地区/国家的人民群体也是包含些许歧视性的，并会令以此作为侧重点的歧视性言论更有市场。当然，一些大陆人日常需要痛心疾首地辱骂本国及其人民来舒缓压力和怒气，也是可以理解的。这样看来，以包含轻微歧视性的语言评判某个群体大概也算是一种需求，本文仅尝试对此种用语方式的性质和影响作出分析与评述，不作过多的道德判断或作主张。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>咚、咚、咚</title>
-      <link>https://bloggie.boilingcong.ee/posts/dong-dong-dong/</link>
-      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bloggie.boilingcong.ee/posts/dong-dong-dong/</guid>
-      <description>&lt;p&gt;晚上在江边散步。江水已经涨到离步道仅有几米距离，树梢露在水面上变成了丛丛灌木。&lt;/p&gt;
-&lt;p&gt;江水不断冲打斜壁，发出咚、咚、咚的声音。此前从未听过这样有节奏而有撞击感的声音，未觉得这江有如此的生命力，离得如此之近。晚风不算黏稠，江边亭檐边挂着的排排风铃叮叮作响。钓客不少，他们的作业环境比平时垂直升了许多，但向水面射着绿色光线观察钩饵这一点没有改变。&lt;/p&gt;
-&lt;p&gt;写着「防汛」字样的帐篷在桥底支着，如两月前在武汉见到的无数「救灾」帐篷，以一种抵抗的姿态，多少显式化了人的恐惧和坚强。离帐篷不远处，几名年纪看起来参差不齐的萨克斯手演奏着听来不激昂也不悲凉的曲子，没多少情绪从中透露，但继续演奏下去或许就是答案。&lt;/p&gt;
-&lt;p&gt;路另一侧，有小艇的引擎轰鸣声，带着斗笠的人或站着抽烟或握着打捞用的网兜，不知赴向何处地从岸边滑出。走过大桥不远，回头望，金色的光流仍延伸，连接着对岸，两边路灯上挂着的灯笼也散着红光，穿梭其中的汽车并未停下。原先通往江边草地的台阶已经只剩下几级了，情侣坐在最上端，拥吻着。&lt;/p&gt;
-&lt;p&gt;我突然觉得，即使再怎么糟糕，以群体而言的人类还是应该活着，因为总有人值得活着。不觉间，小艇已快至江心了，江水咚、咚、咚地冲击着岸边。希望一切都好起来。&lt;/p&gt;</description>
     </item>
     
   </channel>
