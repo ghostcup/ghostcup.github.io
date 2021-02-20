@@ -44,7 +44,7 @@ blockquote {
 
 .posts-group .post-item {
     border-bottom: none;
-    list-style: circle;
+    /* list-style: circle; */
 }
 
 .post-item {
