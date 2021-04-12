@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sat, 20 Feb 2021 02:51:26 +0800</lastBuildDate><atom:link href="https://bloggie.boilingcong.ee/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Apr 2021 10:25:16 +0800</lastBuildDate><atom:link href="https://bloggie.boilingcong.ee/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>真心为你</title>
+      <link>https://bloggie.boilingcong.ee/posts/%E7%9C%9F%E5%BF%83%E4%B8%BA%E4%BD%A0/</link>
+      <pubDate>Mon, 12 Apr 2021 10:25:16 +0800</pubDate>
+      
+      <guid>https://bloggie.boilingcong.ee/posts/%E7%9C%9F%E5%BF%83%E4%B8%BA%E4%BD%A0/</guid>
+      <description>&lt;p&gt;癫狂绝想之作，远超 TV 的剧场版。越看越觉得，EVA 其实不是一部很有「说服力」的作品，我都看不懂很多人喜欢的是什么。除了过硬的美术表现力，其他方面从表达形式到概念内核，皆充斥着私人的情绪和感触。但是狂野帅气的机甲、超前刺激的影像冲击力以及部分「媚宅」元素，还是令其被捧上神坛，使其在我心目里充满矛盾，像是一部糅进了很多商业碎片的艺术作品。&lt;/p&gt;
+&lt;p&gt;EVA 的内核其实就是一种「矛盾」的影像表述，每个人都从内部缺失着，每个人都需要「补完」。总体而言，人类是自私、恐惧、充满欲望、善于「辜负」的，而碇真嗣就是这些原生阴暗人格特质的凝结体。LCL 之海是诡异的，也是迷人的。所有生命体抛却肉体形态，唯有意识以大同之方式悬浮着，一种所谓完美的生存状态。碇真嗣的迷惑也是真实的，我什么也不想做，让我慢慢消失就好了，与所有人一样，就不用再思考了。可是，如果你我彼此交融，不再有隔阂，不再有距离，那我该如何「自私」呢？这便也是一种终极的矛盾，从微观的个人角度来刻画人类总体的贪欲。渴望被他人接受，希求连接，恐惧暧昧，但同时又拒绝真正意味上彻底的边界连通，维护自己的轮廓，强调自己的存在。&lt;/p&gt;
+&lt;p&gt;「意识上载」「灵魂统一」之类超越生命体存在状态瓶颈的概念，总是吸引着我。狭义的全知全能、存在的边界、个体存在的意义，与其相关的思考深邃神秘，令我直觉性地为其兴趣盎然。这也是我看完 Upload 毫不犹豫打了一星的原因──这部作品对于那样的概念和世界，没有任何的深思熟虑。而 EVA 的「人类补完计划」是对于这个概念非常残破、疯狂且混乱，但很充分的一种表达。《真心为你》相对 TV 版，更做了视觉上的补充，虽然本来的「意识流」手法虽是被迫，也令观者迷糊，但对我来说也没什么大问题──我所关注的核心，好像本就是形而上的。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Akira</title>
       <link>https://bloggie.boilingcong.ee/posts/akira/</link>
@@ -185,20 +196,6 @@ Jan 08 07:20:22 boilingcong elasticsearch[31559]: # Native memory allocation (mm
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;并重新启动：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo service elasticsearch restart
 &lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    
-    <item>
-      <title>利用 Hugo 建立静态博客并通过 GitHub Pages 部署</title>
-      <link>https://bloggie.boilingcong.ee/posts/hugo-site-with-github-pages-hosted/</link>
-      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://bloggie.boilingcong.ee/posts/hugo-site-with-github-pages-hosted/</guid>
-      <description>&lt;h1 id=&#34;assumptions-about-audience&#34;&gt;Assumptions about Audience&lt;/h1&gt;
-&lt;p&gt;本「教程」乃为女友之便所写，故&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;假设阅读者具有使用命令行工具的基本能力。（或许有帮助：&lt;a href=&#34;https://linuxcommand.org/lc3_learning_the_shell.php&#34;&gt;Learning the Shell&lt;/a&gt;）&lt;/li&gt;
-&lt;li&gt;假设操作环境为 macOS Mojave/Big Sur。&lt;/li&gt;
-&lt;/ol&gt;</description>
     </item>
     
   </channel>
